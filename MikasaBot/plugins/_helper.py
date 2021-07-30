@@ -51,7 +51,7 @@ async def yardim(event):
 
 @bot.on(mikasa_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
-async def mikasabott(event):
+async def mikasabot(event):
     if event.fwd_from:
         return
     args = event.pattern_match.group(1).lower()
