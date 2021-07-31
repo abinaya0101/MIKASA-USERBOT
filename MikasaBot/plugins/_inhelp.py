@@ -182,7 +182,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ lєgєηdяy Λƒ Mιкαsα Bσт  ⚡**",
                 buttons=[
-                    [Button.url("📑 Repo 📑", "https://t.me/mikasabot_chat")],
+                    [Button.url("📑 Repo 📑", "https://t.me/mikasa_bot_op")],
                     [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fteam-mikasa%2Fmikasa-Bot&template=https%3A%2F%2Fgithub.com%2Fteam-mikasa/mikasa-bot%2Fmikasa-bot")],
                 ],
             )
@@ -209,7 +209,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/Team-mikasa/mikasa-Bot"),
+                            "✨ REPO ✨", "https://github.com/team-mikasa/mikasa-Bot"),
                         custom.Button.url
                     (
                             "🔰 TUTORIAL 🔰", ""
