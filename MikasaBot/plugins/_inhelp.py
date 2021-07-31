@@ -41,16 +41,16 @@ mssge = (
 USER_BOT_WARN_ZERO = "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blocked and Reported**"
 
 mikasa_FIRST = (
-    "**🔥 mikasa Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
+    "**🔥 Mιкαsα Bσт Pяιναтє SєCυяιтy PяσтσCσσl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**Please Choose Why You Are Here!!**".format(mikasa_mention, mssge))
 
 alive_txt = """
-**⚜️ mikasa ιѕ σиℓιиє ⚜️**
+**⚜️ Mιкαsα Bσт ιѕ σиℓιиє ⚜️**
 {}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
 **Telethon :**  `{}`
-**mikasa  :**  **{}**
+**MιкαsαBσт :**  **{}**
 **Uptime   :**  `{}`
 **Abuse    :**  **{}**
 **Sudo      :**  **{}**
@@ -78,13 +78,13 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"◀️ Back {mikasa_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"◀️ 𝙱𝙰𝙲𝙺 {mikasa_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"• ❌ •", data="close"
+               f"• ❌ •", data="𝙲𝙻𝙾𝚂𝙴"
             ),
             custom.Button.inline(
-               f"{mikasa_emoji} Next ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"{mikasa_emoji} 𝙽𝙴𝚇𝚃 ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
@@ -180,10 +180,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**",
+                text=f"**⚡ lєgєηdяy Λƒ Mιкαsα Bσт  ⚡**",
                 buttons=[
                     [Button.url("📑 Repo 📑", "https://t.me/mikasabot_chat")],
-                    [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-mikasaBot%2FmikasaBot&template=https%3A%2F%2Fgithub.com%2Fthe-mikasabot%2Fmikasabot")],
+                    [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fteam-mikasa%2Fmikasa-Bot&template=https%3A%2F%2Fgithub.com%2Fteam-mikasa/mikasa-bot%2Fmikasa-bot")],
                 ],
             )
 
@@ -199,20 +199,20 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@Its_mikasaBot",
-                text="""**Hey! This is [mikasa](https://t.me/its_mikasabot) \nYou can know more about me from the links given below 👇**""",
+                text="""**Hey! This is [Mιкαsα Bσт](https://t.me/mikasa_bot_op) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Its_mikasaBot"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/mikasa_Bot_op"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/mikasabot_chat"
+                            "⚡ GROUP ⚡", "https://t.me/mikasa_bot_support"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/The-mikasaBot/mikasaBot"),
+                            "✨ REPO ✨", "https://github.com/Team-mikasa/mikasa-Bot"),
                         custom.Button.url
                     (
-                            "🔰 TUTORIAL 🔰", "https://youtu.be/M2FQJ_sHp4"
+                            "🔰 TUTORIAL 🔰", ""
                     )
                     ],
                 ],
@@ -228,7 +228,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"🔰 This is mikasa PM Security for {mikasa_mention} to keep away unwanted retards from spamming PM..."
+                f"🔰 This is MιкαsαBσт PM Security for {mikasa_mention} to keep away unwanted retards from spamming PM..."
             )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
@@ -324,7 +324,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     link_preview=False,
                 )
             else:
-                reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © mikasa ™"
+                reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © MιкαsαBσт ™"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         
 
@@ -332,7 +332,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             veriler = custom.Button.inline(f"{mikasa_emoji} Re-Open Menu {mikasa_emoji}", data="reopen")
-            await event.edit(f"**⚜️ mikasa Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {mikasa_mention}\n\n        [©️ mikasa ™️]({chnl_link})", buttons=veriler, link_preview=False)
+            await event.edit(f"**⚜️ Mιкαsα Bσт Mєηυ ρяσνιDєя ιs ησω Clσsє∂ ⚜️**\n\n**Bot Of :**  {mikasa_mention}\n\n        [©️ mikasa ™️]({chnl_link})", buttons=veriler, link_preview=False)
         else:
             reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © mikasa ™"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
@@ -354,7 +354,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © mikasa ™",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © MιкαsαBσт ™",
                 cache_time=0,
                 alert=True,
             )
@@ -429,7 +429,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © mikasa ™",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © MιкαsαBσт ™",
                 cache_time=0,
                 alert=True,
             )
