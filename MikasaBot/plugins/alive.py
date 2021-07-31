@@ -16,8 +16,9 @@ mikasa_caption += "✘ Aʙᴏᴜᴛ Mʏ Sʏsᴛᴇᴍ ✘\n\n"
 mikasa_caption += f"🔹 Tᴇʟᴇᴛʜᴏɴ ➣ `{tel_ver}` \n"
 mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ Gʀᴘ ➣ [Jᴏɪɴ](t.me/MIKASA_BOT_SUPPORT)\n"
 mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ ➣ [Jᴏɪɴ](t.me/MIKASA_BOT_OP)\n"
-mikasa_caption += f"🔹 Cʀᴇᴀᴛᴏʀ ➣ [Tᴇᴀᴍ Mɪᴋᴀsᴀ](t.me/official_mikasa)\n\n"                               
-
+mikasa_caption += f"🔹 Cʀᴇᴀᴛᴏʀ ➣ [⚡Sᴀᴍᴇᴇʀ Oᴘ⚡](t.me/official_sameer)\n\n"                               
+mikasa_caption += f"🔹 Oᴡɴᴇʀ ➣ [⚡Aᴍᴀɴ⚡](t.me/official_sameer)\n\n"                               
+                  
 mikasa_caption += f"[✨ Rᴇᴘᴏ ✨](https://github.com/TEAM-MIKASA/MIKASA-bot)     [⚔️ Hᴀᴛᴇʀs ⚔️](https://t.me/joinchat/uZ3A5na3zLE3Yzhl)\n"                               
 
                              
