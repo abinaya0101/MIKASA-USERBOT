@@ -7,9 +7,9 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from . import *
 
 msg = f"""
-**⚡ mikasa⚡ **
-  •        [📑 Repo 📑](https://github.com/The-mikasaBot/mikasaBot)
-  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeam-mikasaBot%2FmikasaBot&template=https%3A%2F%2Fgithub.com%2FTeam-mikasabot%2Fmikasabot)
+**⚡ Lєgєη∂яy Λƒ Mιкαsα ⚡ **
+  •        [📑 Repo 📑](https://github.com/TEAM-MIKASA/MIKASA-BOT)
+  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeam-mikasa%2Fmikasa-Bot&template=https%3A%2F%2Fgithub.com%2FTeam-mikasa%2Fmikasa-bot)
   •  ©️ {mikasa_channel} ™
 """
 botname = Config.BOT_USERNAME
@@ -20,7 +20,7 @@ async def repo(event):
     try:
         mikasa = await bot.inline_query(botname, "repo")
         await mikasa[0].click(event.chat_id)
-        if event.sender_id == ForGo10God:
+        if event.sender_id == officialsameer:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
