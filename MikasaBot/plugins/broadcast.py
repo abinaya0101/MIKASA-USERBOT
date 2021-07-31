@@ -54,8 +54,3 @@ async def gucast(event):
                 er += 1
     await kk.edit(f"Done in {done} chats, error in {er} chat(s)")
 
-CmdHelp("broadcast").add_command(
-  'gcast', '<reply>/<text>', 'Globally Broadcasting Msg.'
-).add_command(
-  'gucast', '<reply>/<text>, 'Globally Broadcasting Msg.'
-).add()
