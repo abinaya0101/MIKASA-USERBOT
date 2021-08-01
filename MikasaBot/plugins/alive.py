@@ -62,7 +62,7 @@ async def mikasa_a(event):
     try:                
         mikasa = await bot.inline_query(botname, "mikasa")
         await mikasa[0].click(event.chat_id)
-        if event.sender_id == official_sameer:
+        if event.sender_id == officialsameer:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
