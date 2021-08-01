@@ -9,7 +9,7 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
 from . import *
 
-SAMEER = str(ALIVE_NAME) if ALIVE_NAME else "Mikasa Bot"
+SAMEER = str(YOUR_NAME) if YOUR_NAME else "Mikasa Bot"
 
 #-------------------------------------------------------------------------------
 
