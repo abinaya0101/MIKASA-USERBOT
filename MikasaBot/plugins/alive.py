@@ -36,7 +36,7 @@ async def up(mikasa):
         return
     await mikasa.get_chat()
     await mikasa.delete()
-    await bot.send_file(mikasa.chat_id, mikasa_pic, caption=mikasa_caption)
+    await bot.send_file(mikasa.chat_id, mikasa_pic, caption=pm_caption)
     await mikasa.delete()
 
 msg = f"""
