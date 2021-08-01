@@ -13,7 +13,7 @@ from . import *
 #-------------------------------------------------------------------------------
 
 MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-MIKASA_CAPTION = "🔥 #ℓєgєи∂яу_αf_мιкαѕα_вσт 🔥\n\n"
+MIKASA_CAPTION = "🔥 ℓєgєи∂яу αf мιкαѕα вσт 🔥\n\n"
 MIKASA_CAPTION += (
     f"                __↼🄼🄰🅂🅃🄴🅁⇀__\n  **『 {Config.YOUR_NAME} 』**\n\n"
 )
