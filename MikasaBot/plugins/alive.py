@@ -1,3 +1,4 @@
+# credit goes to @D3_krish 
 from telethon import events
 from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
@@ -10,18 +11,21 @@ from . import *
 #-------------------------------------------------------------------------------
 
 mikasa_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-mikasa_caption = f"**__🔥🔥 ℓєgєи∂яу αf мιкαѕα вσт 🔥🔥__**\n\n"
-mikasa_caption += f"  ↼ Oᴡɴᴇʀ ⇀   : 『 {mikasa_mention} 』\n\n"
-mikasa_caption += "✘ Aʙᴏᴜᴛ Mʏ Sʏsᴛᴇᴍ ✘\n\n"
-mikasa_caption += f"🔹 Tᴇʟᴇᴛʜᴏɴ ➣ `{tel_ver}` \n"
-mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ Gʀᴘ ➣ [Jᴏɪɴ](t.me/MIKASA_BOT_SUPPORT)\n"
-mikasa_caption += f"🔹 Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ ➣ [Jᴏɪɴ](t.me/MIKASA_BOT_OP)\n"
-mikasa_caption += f"🔹 Cʀᴇᴀᴛᴏʀ ➣ [⚡Sᴀᴍᴇᴇʀ Oᴘ⚡](t.me/official_sameer)\n"                               
-mikasa_caption += f"🔹 Oᴡɴᴇʀ ➣ [⚡Aᴍᴀɴ⚡](t.me/official_sameer)\n\n"                               
-                  
-mikasa_caption += f"[✨ Rᴇᴘᴏ ✨](https://github.com/TEAM-MIKASA/MIKASA-bot)     [⚔️ Hᴀᴛᴇʀs ⚔️](https://t.me/joinchat/uZ3A5na3zLE3Yzhl)\n"                               
+pm_caption = "  __**🔥🔥𝐌𝐈𝐊𝐀𝐒𝐀 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 🔥🔥**__\n\n"
 
-                             
+pm_caption += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
+pm_caption += (
+    f"                 ↼𝗠𝗔𝗦𝗧𝗘𝗥⇀\n  **『 {mikasa_mention} 』**\n\n"
+)
+pm_caption += f"╔══════════════════╗\n"
+pm_caption += f"╠•➳➠ `𝖳𝖾𝗅𝖾𝗍𝗁𝗈𝗇:` `{tel_ver}` \n"
+pm_caption += f"╠•➳➠ `𝖵𝖾𝗋𝗌𝗂𝗈𝗇:` `{mikasa_ver}`\n"
+pm_caption += f"╠•➳➠ `𝖲𝗎𝖽𝗈:` `{is_sudo}`\n"
+pm_caption += f"╠•➳➠ `𝖢𝗁𝖺𝗇𝗇𝖾𝗅:` {chnl_link}\n"
+pm_caption += f"╠•➳➠ `𝖢𝗋𝖾𝖺𝗍𝗈𝗋:` [𝙼𝙸𝙺𝙰𝚂𝙰](https://t.me/)\n"
+pm_caption += f"╚══════════════════╝\n"
+pm_caption += " [⚡REPO⚡](https://github.com/TEAM-MIKASA/MIKASA-BOt) 🔹 [📜License📜](https://github.com/TEAM-MIKASA/MIKASA-BOt/blob/main/LICENSE)"
+                            
 
 #-------------------------------------------------------------------------------
 
@@ -36,14 +40,16 @@ async def up(mikasa):
     await mikasa.delete()
 
 msg = f"""
-**⚡ℓєgєи∂яу αf мιкαѕα вσт⚡**
+**⚡ 𝐌𝐈𝐊𝐀𝐒𝐀 𝐈𝐒 𝐎𝐍𝐋𝐈𝐍𝐄 ⚡**
 {Config.ALIVE_MSG}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
-**Telethon :**  `{tel_ver}`
-**Mikasa Bot :**  **{mikasa_ver}**
-**Uptime   :**  `{uptime}`
-**Abuse    :**  **{abuse_m}**
-**Sudo     :**  **{is_sudo}**
+**╔══════════════════╗**
+**╠➳➠ 𝐓𝐞𝐥𝐞𝐭𝐡𝐨𝐧 :**  `{tel_ver}`
+**╠➳➠ 𝐌𝐈𝐊𝐀𝐒𝐀 :**  **{mikasa_ver}**
+**╠➳➠ 𝐔𝐩𝐭𝐢𝐦𝐞   :**  `{uptime}`
+**╠➳➠ 𝐀𝐛𝐮𝐬𝐞    :**  **{abuse_m}**
+**╠➳➠ 𝐒𝐮𝐝𝐨      :**  **{is_sudo}**
+**╚══════════════════╝
 """
 botname = Config.BOT_USERNAME
 
@@ -59,8 +65,8 @@ async def mikasa_a(event):
         await eor(event, msg)
 
 
-CmdHelp("mikasa").add_command(
-  "mikasa", None, "Shows the Default Alive Message"
+CmdHelp("alive").add_command(
+  "alive", None, "Shows the Default Alive Message"
 ).add_command(
   "mikasa", None, "Shows Inline Alive Menu with more details."
 ).add_warning(
