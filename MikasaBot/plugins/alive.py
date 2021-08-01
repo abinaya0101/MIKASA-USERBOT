@@ -42,16 +42,16 @@ async def up(mikasa):
     await mikasa.delete()
 
 msg = f"""
-{Config.ALIVE_MSG}**\n\n"
-≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"                
-**┏━━━━━━━━━━━━━━━━━━━\n"
-**┣•➳➠ `Tᴇʟᴇᴛʜᴏɴ:` `1.21.2` \n"
-**┣•➳➠ `Vᴇʀsɪᴏɴ:` `{mikasa_ver}`\n"
-**┣•➳➠ `Sᴜᴅᴏ:` `{is_sudo}`\n"
-**┣•➳➠ `Cʜᴀɴɴᴇʟ:` [Jᴏɪɴ](https://t.me/Mikasa_bot_op)\n"
-**┣•➳➠ `Gʀᴏᴜᴘ:` [Jᴏɪɴ](https://t.me/Mikasa_bot_support)\n"
-**┣•➳➠ `Uᴘᴛɪᴍᴇ:`{uptime}`\n"
-**┗━━━━━━━━━━━━━━━━━━━\n"
+{Config.ALIVE_MSG}
+**≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈**                
+**┏━━━━━━━━━━━━━━━━━━━**
+**┣•➳➠ `Tᴇʟᴇᴛʜᴏɴ:` `1.21.2`**
+**┣•➳➠ `Vᴇʀsɪᴏɴ:` `{mikasa_ver}`**
+**┣•➳➠ `Sᴜᴅᴏ:` `{is_sudo}`**
+**┣•➳➠ `Cʜᴀɴɴᴇʟ:` [Jᴏɪɴ](https://t.me/Mikasa_bot_op)**
+**┣•➳➠ `Gʀᴏᴜᴘ:` [Jᴏɪɴ](https://t.me/Mikasa_bot_support)**
+**┣•➳➠ `Uᴘᴛɪᴍᴇ:`{uptime}`**
+**┗━━━━━━━━━━━━━━━━━━━**
        
 """
 botname = Config.BOT_USERNAME
