@@ -8,25 +8,27 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
 from . import *
 
+SAMEER = str(ALIVE_NAME) if ALIVE_NAME else "Mikasa Bot"
+
 #-------------------------------------------------------------------------------
 
-mikasa_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-pm_caption = "  __**🔥🔥𝐌𝐈𝐊𝐀𝐒𝐀 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 🔥🔥**__\n\n"
+MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
+MIKASA_CAPTION = "  __**🔥🔥 𝐌𝐈𝐊𝐀𝐒𝐀 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 🔥🔥**__\n\n"
 
 pm_caption += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
 pm_caption += (
-    f"                 ↼𝗠𝗔𝗦𝗧𝗘𝗥⇀\n  **『 {mikasa_mention} 』**\n\n"
+    f"                __↼🄼🄰🅂🅃🄴🅁⇀__\n  **『 {SAMEER} 』**\n\n"
 )
-pm_caption += f"╔══════════════════╗\n"
-pm_caption += f"╠•➳➠ `𝖳𝖾𝗅𝖾𝗍𝗁𝗈𝗇:` `{tel_ver}` \n"
-pm_caption += f"╠•➳➠ `𝖵𝖾𝗋𝗌𝗂𝗈𝗇:` `{mikasa_ver}`\n"
-pm_caption += f"╠•➳➠ `𝖲𝗎𝖽𝗈:` `{is_sudo}`\n"
-pm_caption += f"╠•➳➠ `𝖢𝗁𝖺𝗇𝗇𝖾𝗅:` {chnl_link}\n"
-pm_caption += f"╠•➳➠ `𝖢𝗋𝖾𝖺𝗍𝗈𝗋:` [𝙼𝙸𝙺𝙰𝚂𝙰](https://t.me/)\n"
-pm_caption += f"╚══════════════════╝\n"
-pm_caption += " [⚡REPO⚡](https://github.com/TEAM-MIKASA/MIKASA-BOt) 🔹 [📜License📜](https://github.com/TEAM-MIKASA/MIKASA-BOt/blob/main/LICENSE)"
+MIKASA_CAPTION += f"╔══════════════════╗\n"
+MIKASA_CAPTION += f"╠•➳➠ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽:` `{tel_ver}` \n"
+MIKASA_CAPTION += f"╠•➳➠ `𝚅𝙴𝚁𝚂𝙸𝙾𝙽:` `{mikasa_ver}`\n"
+MIKASA_CAPTION += f"╠•➳➠ `𝙶𝚁𝙾𝚄𝙿:` `[𝙹𝙾𝙸𝙽](t.me/mikasa_bot_support)`\n"
+MIKASA_CAPTION += f"╠•➳➠ `𝙲𝙷𝙰𝙽𝙽𝙴𝙻:` [𝙹𝙾𝙸𝙽](t.me/mikasa_bot_op)\n"
+MIKASA_CAPTION += f"╠•➳➠ `𝙲𝚁𝙴𝙰𝚃𝙾𝚁:` [𝚃𝙴𝙰𝙼 𝙼𝙸𝙺𝙰𝚂𝙰](https://t.me/)\n"
+MIKASA_CAPTION += f"╚══════════════════╝\n\n"
+MIKASA_CAPTION += " [⚡𝚁𝙴𝙿𝙾⚡](https://github.com/TEAM-MIKASA/MIKASA-BOt) 🔹 [📜𝙻𝙸𝙲𝙴𝙽𝚂𝙴📜](https://github.com/TEAM-MIKASA/MIKASA-BOt/blob/main/LICENSE)"
                             
-
+                         
 #-------------------------------------------------------------------------------
 
 @bot.on(mikasa_cmd(outgoing=True, pattern="alive$"))
@@ -36,20 +38,21 @@ async def up(mikasa):
         return
     await mikasa.get_chat()
     await mikasa.delete()
-    await bot.send_file(mikasa.chat_id, mikasa_pic, caption=pm_caption)
+    await bot.send_file(mikasa.chat_id, MIKASA_PIC, caption=MIKASA_CAPTION)
     await mikasa.delete()
 
 msg = f"""
-**⚡ 𝐌𝐈𝐊𝐀𝐒𝐀 𝐈𝐒 𝐎𝐍𝐋𝐈𝐍𝐄 ⚡**
-{Config.ALIVE_MSG}
-**🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
-**┌───────────────────**
-**├•➳➠ 𝐓𝐞𝐥𝐞𝐭𝐡𝐨𝐧 :**  `{tel_ver}`
-**├•➳➠ 𝐌𝐈𝐊𝐀𝐒𝐀 :**  **{mikasa_ver}**
-**├•➳➠ 𝐔𝐩𝐭𝐢𝐦𝐞   :**  `{uptime}`
-**├•➳➠ 𝐀𝐛𝐮𝐬𝐞    :**  **{abuse_m}**
-**├•➳➠ 𝐒𝐮𝐝𝐨      :**  **{is_sudo}**
-**└───────────────────
+{config.alive_text}**\n\n"
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"                
+**┏━━━━━━━━━━━━━━━━━━━\n"
+**┣•➳➠ `Tᴇʟᴇᴛʜᴏɴ:` `1.21.2` \n"
+**┣•➳➠ `Vᴇʀsɪᴏɴ:` `{mikasa_ver}`\n"
+**┣•➳➠ `Sᴜᴅᴏ:` `{sudou}`\n"
+**┣•➳➠ `Cʜᴀɴɴᴇʟ:` [Jᴏɪɴ](https://t.me/Mikasa_bot_op)\n"
+**┣•➳➠ `Gʀᴏᴜᴘ:` [Jᴏɪɴ](https://t.me/Mikasa_bot_support)\n"
+**┣•➳➠ `Uᴘᴛɪᴍᴇ:`{uptime}`\n"
+**┗━━━━━━━━━━━━━━━━━━━\n"
+       
 """
 botname = Config.BOT_USERNAME
 
