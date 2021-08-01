@@ -9,7 +9,6 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
 from . import *
 
-SAMEER = str(YOUR_NAME) if YOUR_NAME else "Mikasa Bot"
 
 #-------------------------------------------------------------------------------
 
@@ -18,7 +17,7 @@ MIKASA_CAPTION = "  __**🔥🔥 𝐌𝐈𝐊𝐀𝐒𝐀 𝐁𝐎𝐓 𝐈𝐒 
 
 pm_caption += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
 pm_caption += (
-    f"                __↼🄼🄰🅂🅃🄴🅁⇀__\n  **『 {SAMEER} 』**\n\n"
+    f"                __↼🄼🄰🅂🅃🄴🅁⇀__\n  **『 {Config.YOUR_NAME} 』**\n\n"
 )
 MIKASA_CAPTION += f"╔══════════════════╗\n"
 MIKASA_CAPTION += f"╠•➳➠ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽:` `{tel_ver}` \n"
