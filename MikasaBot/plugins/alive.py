@@ -15,8 +15,8 @@ from . import *
 MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 MIKASA_CAPTION = "  __**🔥🔥 𝐌𝐈𝐊𝐀𝐒𝐀 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 🔥🔥**__\n\n"
 
-pm_caption += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
-pm_caption += (
+MIKASA_CAPTION += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
+MIKASA_CAPTION += (
     f"                __↼🄼🄰🅂🅃🄴🅁⇀__\n  **『 {Config.YOUR_NAME} 』**\n\n"
 )
 MIKASA_CAPTION += f"╔══════════════════╗\n"
