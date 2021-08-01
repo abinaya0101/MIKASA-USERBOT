@@ -13,9 +13,7 @@ from . import *
 #-------------------------------------------------------------------------------
 
 MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-MIKASA_CAPTION = "  __**🔥🔥 𝐌𝐈𝐊𝐀𝐒𝐀 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 🔥🔥**__\n\n"
-
-MIKASA_CAPTION += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
+MIKASA_CAPTION = "🔥 #ℓєgєи∂яу_αf_мιкαѕα_вσт 🔥\n\n"
 MIKASA_CAPTION += (
     f"                __↼🄼🄰🅂🅃🄴🅁⇀__\n  **『 {Config.YOUR_NAME} 』**\n\n"
 )
@@ -24,7 +22,7 @@ MIKASA_CAPTION += f"╠•➳➠ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽:` `{tel_ver}`
 MIKASA_CAPTION += f"╠•➳➠ `𝚅𝙴𝚁𝚂𝙸𝙾𝙽:` `{mikasa_ver}`\n"
 MIKASA_CAPTION += f"╠•➳➠ `𝙶𝚁𝙾𝚄𝙿:`  [𝙹𝙾𝙸𝙽](t.me/mikasa_bot_support)\n"
 MIKASA_CAPTION += f"╠•➳➠ `𝙲𝙷𝙰𝙽𝙽𝙴𝙻:` [𝙹𝙾𝙸𝙽](t.me/mikasa_bot_op)\n"
-MIKASA_CAPTION += f"╠•➳➠ `𝙲𝚁𝙴𝙰𝚃𝙾𝚁:` [𝚃𝙴𝙰𝙼 𝙼𝙸𝙺𝙰𝚂𝙰](https://t.me/)\n"
+MIKASA_CAPTION += f"╠•➳➠ `𝙲𝚁𝙴𝙰𝚃𝙾𝚁:` [𝙼𝙸𝙺𝙰𝚂𝙰](https://t.me/Mikasa_bot_op)\n"
 MIKASA_CAPTION += f"╚══════════════════╝\n\n"
 MIKASA_CAPTION += " [⚡𝚁𝙴𝙿𝙾⚡](https://github.com/TEAM-MIKASA/MIKASA-BOt) 🔹 [📜𝙻𝙸𝙲𝙴𝙽𝚂𝙴📜](https://github.com/TEAM-MIKASA/MIKASA-BOt/blob/main/LICENSE)"
                             
