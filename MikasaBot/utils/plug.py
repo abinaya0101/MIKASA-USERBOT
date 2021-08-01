@@ -74,7 +74,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["MikasaBot.plugins." + shortname] = mod
-        LOGS.info("⚡ ʍɨӄǟֆǟ ẞø† ⚡ - Successfully Imported " + shortname)
+        LOGS.info("⚡ мιкαѕα вσт ⚡ - Successfully Imported " + shortname)
 
 
 # remove plugins
