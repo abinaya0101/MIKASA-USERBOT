@@ -1,4 +1,5 @@
-# credit goes to @D3_krish 
+# credit goes to @D3_krish and @official_sameer
+
 from telethon import events
 from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
@@ -42,7 +43,7 @@ async def up(mikasa):
     await mikasa.delete()
 
 msg = f"""
-{config.alive_text}**\n\n"
+{Config.ALIVE_MSG}**\n\n"
 ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"                
 **┏━━━━━━━━━━━━━━━━━━━\n"
 **┣•➳➠ `Tᴇʟᴇᴛʜᴏɴ:` `1.21.2` \n"
