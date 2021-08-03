@@ -55,7 +55,7 @@ botname = Config.BOT_USERNAME
 
 @bot.on(mikasa_cmd(pattern="mikasa$"))
 @bot.on(sudo_cmd(pattern="mikasa$", allow_sudo=True))
-async def mik_asa(event):
+async def _(event):
     try:                
         mikasa = await bot.inline_query(botname, "mikasa")
         await mikasa[0].click(event.chat_id)
