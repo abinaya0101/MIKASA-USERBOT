@@ -57,7 +57,7 @@ botname = Config.BOT_USERNAME
 @bot.on(sudo_cmd(pattern="mikasa$", allow_sudo=True))
 async def _(event):
     try:                
-        mikasa = await bot.inline_query(botname, "mikasa")
+        mikasa = await bot.inline_query(botname, "alive")
         await mikasa[0].click(event.chat_id)
         if event.sender_id == officialsameer:
             await event.delete()
