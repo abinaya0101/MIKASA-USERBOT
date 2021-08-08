@@ -11,4 +11,4 @@ echo """
                                 
 """
 
-python3 -m mikasabot
+python3 -m deadlybot

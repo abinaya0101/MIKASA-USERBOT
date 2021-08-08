@@ -40,7 +40,7 @@ async def yardim(event):
     except:
         pass
     if tgbotusername is not None:
-        results = await event.client.inline_query(tgbotusername, "mikasabot_help")
+        results = await event.client.inline_query(tgbotusername, "deadlybot_help")
         await results[0].click(
             event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
         )
@@ -51,7 +51,7 @@ async def yardim(event):
 
 @bot.on(mikasa_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
-async def mikasabot(event):
+async def deadlybot(event):
     if event.fwd_from:
         return
     args = event.pattern_match.group(1).lower()
