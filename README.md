@@ -10,16 +10,16 @@
 
 ## Status Of Bot 
 
-<p align="left"><a href="https://github.com/sameerpanthi/deadly-op-bot/network/members"><img src="https://img.shields.io/github/forks/TEAM-MIKASA/MIKASA-BOT?label=Forks&logoColor=Black&style=social"></a><p align="left"><a href="https://github.com/TEAM-MIKASA/MIKASA-BOT/stargazers"><img src="https://img.shields.io/github/stars/TEAM-MIKASA/MIKASA-BOT?logoColor=Blue&style=social"></a><p align="left"><a href="https://github.com/TEAM-MIKASA/MIKASA-BOT"></a><p align="left"><a href="https://github.com/TEAM-MIKASA/MIKASA-BOT?"></
+<p align="left"><a href="https://github.com/sameerpanthi/deadly-op-bot/network/members"><img src="https://img.shields.io/github/forks/TEAM-MIKASA/MIKASA-BOT?label=Forks&logoColor=Black&style=social"></a><p align="left"><a href="https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/stargazers"><img src="https://img.shields.io/github/stars/TEAM-MIKASA/MIKASA-BOT?logoColor=Blue&style=social"></a><p align="left"><a href="https://github.com/DEADLY-FIGHTERS/DEADLY-BOT"></a><p align="left"><a href="https://github.com/DEADLY-FIGHTERS/DEADLY-BOT?"></
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7c51539e67b483bb8d7749acca51d3a)](https://app.codacy.com/gh/TEAM-MIKASA/MIKASA-BOT?utm_source=github.com&utm_medium=referral&utm_content=TEAM-MIKASA/MIKASA-BOT&utm_campaign=Badge_Grade_Settings)
-[![Size](https://img.shields.io/github/repo-size/TEAM-MIKASA/MIKASA-BOT?style=flat-square&color=green)](https://github.com/TEAM-MIKASA/MIKASA-BOT/)   
+[![Size](https://img.shields.io/github/repo-size/TEAM-MIKASA/MIKASA-BOT?style=flat-square&color=green)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/)   
 [![Python](https://img.shields.io/badge/Python-v3.9-blue)](https://www.python.org/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/TEAM-MIKASA/MIKASA-BOT/graphs/commit-activity)
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/TEAM-MIKASA/MIKASA-BOT)   
-[![Contributors](https://img.shields.io/github/contributors/TEAM-MIKASA/MIKASA-BOT?style=flat-square&color=green)](https://github.com/TEAM-MIKASA/MIKASA-BOT/graphs/contributors)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/graphs/commit-activity)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT)   
+[![Contributors](https://img.shields.io/github/contributors/TEAM-MIKASA/MIKASA-BOT?style=flat-square&color=green)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/graphs/contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/TEAM-MIKASA/MIKASA-BOT/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/blob/main/LICENSE)
 
 ------
 
@@ -37,7 +37,7 @@
 
 ## 𝙳𝙴𝙿𝙻𝙾𝚈  🚀
 
-[![Deploy]()](https://heroku.com/deploy?template=https://github.com/TEAM-MIKASA/MIKASA-BOT)
+[![Deploy]()](https://heroku.com/deploy?template=https://github.com/DEADLY-FIGHTERS/DEADLY-BOT)
 
 ------------------------------------------------
 ## 𝚁𝙴𝙿𝙻 :                

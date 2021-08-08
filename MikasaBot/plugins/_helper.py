@@ -8,7 +8,7 @@ from . import *
 
 msg = f"""
 **⚡ Lєgєη∂яy Λƒ Mιкαsα ⚡ **
-  •        [📑 Repo 📑](https://github.com/TEAM-MIKASA/MIKASA-BOT)
+  •        [📑 Repo 📑](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT)
   •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeam-deadly%2Fdeadly-Bot&template=https%3A%2F%2Fgithub.com%2FTeam-deadly%2Fdeadly-bot)
   •  ©️ {deadly_channel} ™
 """
