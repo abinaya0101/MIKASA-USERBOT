@@ -1,5 +1,5 @@
 # If you kang this plugin please don't remove credit
-#credit goes to @D3_krish he make this plugin for Mikasa userbot
+#credit goes to @D3_krish he make this plugin for Deadly userbot
 
 import os
 
