@@ -1,7 +1,7 @@
 import re
 from telethon import events
 
-from MikasaBot.sql import blacklist_sql as sq
+from DeadlyBot.sql import blacklist_sql as sq
 from . import *
 
 

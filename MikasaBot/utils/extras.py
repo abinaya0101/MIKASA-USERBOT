@@ -16,9 +16,9 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from MikasaBot import *
-from MikasaBot.helpers import *
-from MikasaBot.config import Config
+from DeadlyBot import *
+from DeadlyBot.helpers import *
+from DeadlyBot.config import Config
 
 
 # either edit or reply that msg
@@ -100,4 +100,4 @@ async def delete_mikasa(event, text, time=None, parse_mode=None, link_preview=No
     await asyncio.sleep(time)
     return await mikasaevent.delete()
 
-# MikasaBot
+# DeadlyBot

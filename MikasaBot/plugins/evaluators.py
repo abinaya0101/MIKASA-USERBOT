@@ -27,7 +27,7 @@ async def _(event):
     if mikasauser.username:
         curruser = mikasauser.username
     else:
-        curruser = "MikasaBot"
+        curruser = "DeadlyBot"
     uid = os.geteuid()
     if uid == 0:
         cresult = f"`{curruser}:~#` `{cmd}`\n`{result}`"
@@ -139,7 +139,7 @@ async def _(event):
 CmdHelp("evaluators").add_command(
   "eval", "<expr>", "Execute python script"
 ).add_command(
-  "exec", "<command>", "Execute a Terminal command on MikasaBot server and shows details"
+  "exec", "<command>", "Execute a Terminal command on DeadlyBot server and shows details"
 ).add_command(
   "bash", "<query>", "Bash your codes on linux and gives the output in current chat"
 ).add_info(

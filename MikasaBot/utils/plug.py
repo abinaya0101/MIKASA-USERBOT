@@ -16,16 +16,16 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from MikasaBot import *
-from MikasaBot.helpers import *
-from MikasaBot.config import *
-from MikasaBot.utils import *
+from DeadlyBot import *
+from DeadlyBot.helpers import *
+from DeadlyBot.config import *
+from DeadlyBot.utils import *
 
 
 # ENV
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from MikasaBot.config import Config
+    from DeadlyBot.config import Config
 else:
     if os.path.exists("Config.py"):
         from Config import Development as Config
@@ -36,19 +36,19 @@ def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import MikasaBot.utils
+        import DeadlyBot.utils
 
-        path = Path(f"MikasaBot/plugins/{shortname}.py")
-        name = "MikasaBot.plugins.{}".format(shortname)
+        path = Path(f"DeadlyBot/plugins/{shortname}.py")
+        name = "DeadlyBot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("MikasaBot - Successfully imported " + shortname)
+        LOGS.info("DeadlyBot - Successfully imported " + shortname)
     else:
-        import MikasaBot.utils
+        import DeadlyBot.utils
 
-        path = Path(f"MikasaBot/plugins/{shortname}.py")
-        name = "MikasaBot.plugins.{}".format(shortname)
+        path = Path(f"DeadlyBot/plugins/{shortname}.py")
+        name = "DeadlyBot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -56,10 +56,10 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = MikasaBot.utils
+        sys.modules["uniborg.util"] = DeadlyBot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.MikasaBot = bot
+        mod.DeadlyBot = bot
         mod.edit_or_reply = edit_or_reply
         mod.eor = edit_or_reply
         mod.delete_mikasa = delete_mikasa
@@ -67,13 +67,13 @@ def load_module(shortname):
         mod.Var = Config
         mod.admin_cmd = mikasa_cmd
         # support for other userbots
-        sys.modules["userbot.utils"] = MikasaBot.utils
-        sys.modules["userbot"] = MikasaBot
+        sys.modules["userbot.utils"] = DeadlyBot.utils
+        sys.modules["userbot"] = DeadlyBot
         # support for paperplaneextended
-        sys.modules["userbot.events"] = MikasaBot
+        sys.modules["userbot.events"] = DeadlyBot
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["MikasaBot.plugins." + shortname] = mod
+        sys.modules["DeadlyBot.plugins." + shortname] = mod
         LOGS.info("⚡ мιкαѕα вσт ⚡ - Successfully Imported " + shortname)
 
 
@@ -86,7 +86,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except BaseException:
-            name = f"MikasaBot.plugins.{shortname}"
+            name = f"DeadlyBot.plugins.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -95,4 +95,4 @@ def remove_plugin(shortname):
     except BaseException:
         raise ValueError
 
-# MikasaBot
+# DeadlyBot

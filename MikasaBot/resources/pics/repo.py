@@ -1,4 +1,4 @@
-from MikasaBot.helpers import *
+from DeadlyBot.helpers import *
 
 Chakka = "You"
 Print(f"Teri vhen ki .....")

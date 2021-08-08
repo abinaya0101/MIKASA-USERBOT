@@ -30,7 +30,7 @@ KANGING_STR = [
     "Turn around, Go straight and f*ck off...",
 ]
 
-MikasaBot = Config.STICKER_PACKNAME
+DeadlyBot = Config.STICKER_PACKNAME
 
 
 @bot.on(mikasa_cmd(outgoing=True, pattern="kang"))
@@ -97,11 +97,11 @@ async def kang(args):
                 # pack
                 emoji = splat[1]
 
-        packname = f"{user.username}_MikasaBot_{pack}"
+        packname = f"{user.username}_DeadlyBot_{pack}"
         packnick = (
-            f"{MikasaBot} Vol.{pack}"
-            if MikasaBot
-            else f"@{user.username}'s MikasaBot Vol.{pack}"
+            f"{DeadlyBot} Vol.{pack}"
+            if DeadlyBot
+            else f"@{user.username}'s DeadlyBot Vol.{pack}"
         )
         cmd = "/newpack"
         file = io.BytesIO()
@@ -135,9 +135,9 @@ async def kang(args):
                     pack += 1
                     packname = f"{user.username}_by_{user.username}_{pack}"
                     packnick = (
-                        f"{MikasaBot} Vol.{pack}"
-                        if MikasaBot
-                        else f"@{user.username}'s MikasaBot Vol.{pack}"
+                        f"{DeadlyBot} Vol.{pack}"
+                        if DeadlyBot
+                        else f"@{user.username}'s DeadlyBot Vol.{pack}"
                     )
                     await mikasa.edit(
                         "`Switching to Pack "
@@ -449,7 +449,7 @@ async def sticklet(event):
     )
 
     image_stream = io.BytesIO()
-    image_stream.name = "MikasaBot.webp"
+    image_stream.name = "DeadlyBot.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
 

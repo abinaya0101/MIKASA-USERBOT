@@ -6,8 +6,8 @@ import sys
 import os
 from . import *
 
-if not os.path.isdir("./MikasaBot/"):
-    os.makedirs("./MikasaBot/")
+if not os.path.isdir("./DeadlyBot/"):
+    os.makedirs("./DeadlyBot/")
 
 
 @bot.on(mikasa_cmd(pattern=r"feye$"))

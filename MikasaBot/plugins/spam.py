@@ -29,9 +29,9 @@ async def spammer(e):
 async def bigspam(mikasa):
     if not mikasa.text[0].isalpha() and mikasa.text[0] not in ("/", "#", "@", "!"):
         mikasa_msg = mikasa.text
-        MikasaBot_count = int(mikasa_msg[9:13])
+        DeadlyBot_count = int(mikasa_msg[9:13])
         mikasa_spam = str(mikasa.text[13:])
-        for i in range(1, MikasaBot_count):
+        for i in range(1, DeadlyBot_count):
             await mikasa.respond(mikasa_spam)
         await mikasa.delete()
         await mikasa.client.send_message(
@@ -89,7 +89,7 @@ CmdHelp("spam").add_command(
 ).add_command(
   "dspam", "<delay> <spam count> <text>", "Sends the text 'X' number of times in 'Y' seconds of delay", ".dspam 5 100 Hello"
 ).add_command(
-  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what MikasaBot iz known for. The Best BigSpam Ever", ".bigspam 5000 Hello"
+  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what DeadlyBot iz known for. The Best BigSpam Ever", ".bigspam 5000 Hello"
 ).add_info(
   "Spammers Commands"
 ).add_warning(

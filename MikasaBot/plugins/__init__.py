@@ -1,20 +1,20 @@
 import datetime
-from MikasaBot import *
-from MikasaBot.config import Config
-from MikasaBot.helpers import *
-from MikasaBot.utils import *
-from MikasaBot.random_strings import *
-from MikasaBot.version import __mikasa__
+from DeadlyBot import *
+from DeadlyBot.config import Config
+from DeadlyBot.helpers import *
+from DeadlyBot.utils import *
+from DeadlyBot.random_strings import *
+from DeadlyBot.version import __mikasa__
 from telethon import version
 
 
 MIKASA_USER = bot.me.first_name
 official_sameer = bot.uid
 mikasa_mention = f"[{MIKASA_USER}](tg://user?id={official_sameer})"
-mikasa_logo = "./MikasaBot/resources/pics/MikasaBot_logo.jpg"
-cjb = "./MikasaBot/resources/pics/cjb.jpg"
-restlo = "./MikasaBot/resources/pics/rest.jpeg"
-shuru = "./MikasaBot/resources/pics/shuru.jpg"
+mikasa_logo = "./DeadlyBot/resources/pics/DeadlyBot_logo.jpg"
+cjb = "./DeadlyBot/resources/pics/cjb.jpg"
+restlo = "./DeadlyBot/resources/pics/rest.jpeg"
+shuru = "./DeadlyBot/resources/pics/shuru.jpg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
 mikasa_ver = __mikasa__
@@ -70,4 +70,4 @@ WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attract
 """
 # will add more soon
 
-# MikasaBot
+# DeadlyBot
