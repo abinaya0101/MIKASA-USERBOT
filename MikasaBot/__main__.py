@@ -77,7 +77,7 @@ LOGS.info("Starting Bot Mode !")
 tbot.start()
 LOGS.info("⚡ Your DeadlyBot Is Now Working ⚡")
 LOGS.info(
-    "Head to @MIKASA_BOT_OP for Updates. Also join chat group to get help regarding to DeadlyBot."
+    "Head to @deadly_techy for Updates. Also join chat group to get help regarding to DeadlyBot."
 )
 
 # that's life...
@@ -87,14 +87,14 @@ async def mikasa_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 MIKASA_PIC,
-                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {mikasaver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/MIKASA_BOT_OP) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/Deadly_bot_support) for any query regarding ʍɨӄǟֆǟ ẞø†",
+                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {mikasaver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/deadly_techy) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/Deadly_bot_support) for any query regarding ʍɨӄǟֆǟ ẞø†",
             )
     except Exception as e:
         LOGS.info(str(e))
 
 # Join DeadlyBot Channel after deploying 🤐😅
     try:
-        await bot(JoinChannelRequest("@MIKASA_BOT_OP"))
+        await bot(JoinChannelRequest("@deadly_techy"))
     except BaseException:
         pass
 

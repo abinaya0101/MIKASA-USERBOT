@@ -41,14 +41,14 @@ else:
 
 START_TIME = datetime.datetime.now()
 uptime = f"{str(datetime.datetime.now() - START_TIME).split('.')[0]}"
-my_channel = Config.MY_CHANNEL or "MIKASA_BOT_OP"
+my_channel = Config.MY_CHANNEL or "deadly_techy"
 my_group = Config.MY_GROUP or "Deadly_bot_support"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/MIKASA_BOT_OP"
+chnl_link = "https://t.me/deadly_techy"
 mikasa_channel = f"[†hê ʍɨӄǟֆǟ ẞø†]({chnl_link})"
 grp_link = "https://t.me/Deadly_bot_support"
 mikasa_grp = f"[ʍɨӄǟֆǟ ẞø† Group]({grp_link})"
