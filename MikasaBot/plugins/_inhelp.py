@@ -41,7 +41,7 @@ mssge = (
 USER_BOT_WARN_ZERO = "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blocked and Reported**"
 
 deadly_FIRST = (
-    "**🔥 Mιкαsα Bσт Pяιναтє SєCυяιтy PяσтσCσσl 🔥**\n\nThis is to inform you that "
+    "**🔥 Dєα∂ly Bσт Pяιναтє SєCυяιтy PяσтσCσσl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**Please Choose Why You Are Here!!**".format(deadly_mention, mssge))
 
@@ -182,7 +182,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚡ lєgєηdяy Λƒ Mιкαsα Bσт  ⚡**",
+                text=f"**⚡ lєgєηdяy Λƒ Dєα∂ly Bσт  ⚡**",
                 buttons=[
                     [Button.url("📑 Repo 📑", "https://t.me/deadly_bot_op")],
                     [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fteam-deadly%2Fdeadly-Bot&template=https%3A%2F%2Fgithub.com%2Fteam-deadly/deadly-bot%2Fdeadly-bot")],
@@ -201,7 +201,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@Its_deadlyBot",
-                text="""**Hey! This is [Mιкαsα Bσт](https://t.me/deadly_bot_op) \nYou can know more about me from the links given below 👇**""",
+                text="""**Hey! This is [Dєα∂ly Bσт](https://t.me/deadly_bot_op) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
                         custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/deadly_Bot_op"),
@@ -334,7 +334,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             veriler = custom.Button.inline(f"{deadly_emoji} Re-Open Menu {deadly_emoji}", data="reopen")
-            await event.edit(f"**⚜️ Mιкαsα Bσт Mєηυ ρяσνιDєя ιs ησω Clσsє∂ ⚜️**\n\n**Bot Of :**  {deadly_mention}\n\n        [©️ deadly ™️]({chnl_link})", buttons=veriler, link_preview=False)
+            await event.edit(f"**⚜️ Dєα∂ly Bσт Mєηυ ρяσνιDєя ιs ησω Clσsє∂ ⚜️**\n\n**Bot Of :**  {deadly_mention}\n\n        [©️ deadly ™️]({chnl_link})", buttons=veriler, link_preview=False)
         else:
             reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © deadly ™"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
