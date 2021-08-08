@@ -1,5 +1,5 @@
 <h1 align="center">
-<b>𝐌𝐈𝐊𝐀𝐒𝐀 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 {🇮🇳}</b>
+<b>𝐃𝐄𝐀𝐃𝐋𝐘 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 {🇮🇳}</b>
 </h1>
 <p align="center">
   <img src="https://telegra.ph/file/3142697b0998fa9fa464c.jpg" alt="The-PANTHERS BOT">
@@ -24,7 +24,7 @@
 ------
 
 ## 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 : 
-[『𝚃𝙴𝙰𝙼 𝙼𝙸𝙺𝙰𝚂𝙰』](https://t.me/deadly_network)
+[『Tᴇᴀᴍ Dᴇᴀᴅʟʏ』](https://t.me/deadly_FIGHTERS)
 
 ---------------
 
@@ -50,11 +50,11 @@
 - If You have Enabled 2-Step Verification then fill your password.
 - Your Deadly Bot Session Will be saved in your Telegram Saved Message.
 
-[![repl]()](https://replit.com/@TEAM-MIKASA/MIKASA-OP-BOT#main.py)
+[![repl]()](https://replit.com/@sameerpanthi/DEADLY-FIGHTERS-BOT#main.py)
     
 -------------------------------------------------
 ## 𝚅𝙰𝚁𝙸𝙰𝙱𝙻𝙴𝚂 :
-
+                            
 - `APP_ID`  =  Get this value from my.telegram.org
 - `API_HASH`  =  Get this value from my.telegram.org
 - `STRING_SESSION`  =  Get this by using [Repl.it](#Repl) or from [terminal](#Terminal)
