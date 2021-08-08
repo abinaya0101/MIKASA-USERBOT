@@ -24,7 +24,7 @@ MIKASA_CAPTION += f"╠•➳➠ `𝙶𝚁𝙾𝚄𝙿:`  [𝙹𝙾𝙸𝙽](t.m
 MIKASA_CAPTION += f"╠•➳➠ `𝙲𝙷𝙰𝙽𝙽𝙴𝙻:` [𝙹𝙾𝙸𝙽](t.me/deadly_techy)\n"
 MIKASA_CAPTION += f"╠•➳➠ `𝙲𝚁𝙴𝙰𝚃𝙾𝚁:` [𝙼𝙸𝙺𝙰𝚂𝙰](https://t.me/Deadly_bot_op)\n"
 MIKASA_CAPTION += f"╚══════════════════╝\n\n"
-MIKASA_CAPTION += " [⚡𝚁𝙴𝙿𝙾⚡](https://github.com/TEAM-MIKASA/MIKASA-BOt) 🔹 [📜𝙻𝙸𝙲𝙴𝙽𝚂𝙴📜](https://github.com/TEAM-MIKASA/MIKASA-BOt/blob/main/LICENSE)"
+MIKASA_CAPTION += " [⚡𝚁𝙴𝙿𝙾⚡](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT) 🔹 [📜𝙻𝙸𝙲𝙴𝙽𝚂𝙴📜](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/blob/main/LICENSE)"
                             
                          
 #-------------------------------------------------------------------------------
