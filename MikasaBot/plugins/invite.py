@@ -63,9 +63,9 @@ async def get_users(event):
     else:
         deadly = await eor(event, "`processing...`")
     he_ll = event.pattern_match.group(1)
-    if he_ll == "@Deadly_bot_support":
+    if he_ll == "@deadly_userbot":
         return await deadly.edit("Restricted to invite users from there.")
-    elif he_ll == "@Deadly_bot_support":
+    elif he_ll == "@deadly_userbot":
         return await deadly.edit("Restricted to invite users from there.")
     elif he_ll == "@HELLBOT_CHAT":
         return await deadly.edit("Restricted to invite users from there.")
