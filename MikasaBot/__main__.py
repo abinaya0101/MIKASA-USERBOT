@@ -87,7 +87,7 @@ async def deadly_is_on():
             await bot.send_file(
                 Config.LOGGER_ID,
                 MIKASA_PIC,
-                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {deadlyver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/deadly_techy) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/deadly_userbot) for any query regarding ʍɨӄǟֆǟ ẞø†",
+                caption=f"#START \n\nDeployed Dєα∂ly Bσт Successfully\n\n**Dєα∂ly Bσт - {deadlyver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [Dєα∂ly Bσт Channel](t.me/deadly_techy) for Updates & [Dєα∂ly Bσт Chat](t.me/deadly_userbot) for any query regarding Dєα∂ly Bσт",
             )
     except Exception as e:
         LOGS.info(str(e))

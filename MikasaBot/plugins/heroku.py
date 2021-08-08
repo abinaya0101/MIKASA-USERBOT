@@ -44,7 +44,7 @@ async def re(deadly):
     if HEROKU_API_KEY:
         await restart(event)
     else:
-        await event.edit("Please Set Your `HEROKU_API_KEY` to restart ʍɨӄǟֆǟ ẞø†")
+        await event.edit("Please Set Your `HEROKU_API_KEY` to restart Dєα∂ly Bσт")
 
 
 @bot.on(deadly_cmd(pattern="shutdown$"))
@@ -54,7 +54,7 @@ async def down(deadly):
         return
     event = await eor(deadly, "`Turing Off Heroku Dynos...`")
     await asyncio.sleep(2)
-    await event.edit("**[ ⚠️ ]** \n**ʍɨӄǟֆǟ ẞø† Dynos is now turned off. Manually turn it on to start again.**")
+    await event.edit("**[ ⚠️ ]** \n**Dєα∂ly Bσт Dynos is now turned off. Manually turn it on to start again.**")
     if HEROKU_APP is not None:
         HEROKU_APP.process_formation()["worker"].scale(0)
     else:

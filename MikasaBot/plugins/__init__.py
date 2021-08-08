@@ -49,9 +49,9 @@ if "@" in my_group:
     my_group = my_group.replace("@", "")
 
 chnl_link = "https://t.me/deadly_techy"
-deadly_channel = f"[†hê ʍɨӄǟֆǟ ẞø†]({chnl_link})"
+deadly_channel = f"[†hê Dєα∂ly Bσт]({chnl_link})"
 grp_link = "https://t.me/deadly_userbot"
-deadly_grp = f"[ʍɨӄǟֆǟ ẞø† Group]({grp_link})"
+deadly_grp = f"[Dєα∂ly Bσт Group]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {mention} :  To mention the user

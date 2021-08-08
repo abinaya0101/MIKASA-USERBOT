@@ -45,7 +45,7 @@ async def _(event):
             r = await event.client(
                 functions.channels.CreateChannelRequest(
                     title=group_name,
-                    about="Created By ʍɨӄǟֆǟ ẞø†",
+                    about="Created By Dєα∂ly Bσт",
                     megagroup=type_of_group != "c",
                 )
             )
