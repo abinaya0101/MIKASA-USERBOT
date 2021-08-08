@@ -184,7 +184,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ lєgєηdяy Λƒ Dєα∂ly Bσт  ⚡**",
                 buttons=[
-                    [Button.url("📑 Repo 📑", "https://t.me/deadly_bot_op")],
+                    [Button.url("📑 Repo 📑", "https://t.me/deadly_techy")],
                     [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fteam-deadly%2Fdeadly-Bot&template=https%3A%2F%2Fgithub.com%2Fteam-deadly/deadly-bot%2Fdeadly-bot")],
                 ],
             )
@@ -201,7 +201,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@Its_deadlyBot",
-                text="""**Hey! This is [Dєα∂ly Bσт](https://t.me/deadly_bot_op) \nYou can know more about me from the links given below 👇**""",
+                text="""**Hey! This is [Dєα∂ly Bσт](https://t.me/deadly_techy) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
                         custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/deadly_Bot_op"),
