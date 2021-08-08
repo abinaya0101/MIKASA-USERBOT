@@ -24,14 +24,14 @@
 ------
 
 ## 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 : 
-[『𝚃𝙴𝙰𝙼 𝙼𝙸𝙺𝙰𝚂𝙰』](https://t.me/mikasa_network)
+[『𝚃𝙴𝙰𝙼 𝙼𝙸𝙺𝙰𝚂𝙰』](https://t.me/deadly_network)
 
 ---------------
 
 ## 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 :
 
-- <a href="https://t.me/mikasa_bot_support"><img src="https://img.shields.io/badge/Join-SUPPORT%20GROUP-red.svg?logo=Telegram"></a>
-- <a href="https://t.me/mikasa_bot_op"><img src="https://img.shields.io/badge/Join-SUPPORT%20CHANNEL-red.svg?logo=Telegram"></a>
+- <a href="https://t.me/deadly_bot_support"><img src="https://img.shields.io/badge/Join-SUPPORT%20GROUP-red.svg?logo=Telegram"></a>
+- <a href="https://t.me/deadly_bot_op"><img src="https://img.shields.io/badge/Join-SUPPORT%20CHANNEL-red.svg?logo=Telegram"></a>
 
 -------------------------------------------------
 

@@ -4,20 +4,20 @@ from DeadlyBot.config import Config
 from DeadlyBot.helpers import *
 from DeadlyBot.utils import *
 from DeadlyBot.random_strings import *
-from DeadlyBot.version import __mikasa__
+from DeadlyBot.version import __deadly__
 from telethon import version
 
 
 MIKASA_USER = bot.me.first_name
 official_sameer = bot.uid
-mikasa_mention = f"[{MIKASA_USER}](tg://user?id={official_sameer})"
-mikasa_logo = "./DeadlyBot/resources/pics/DeadlyBot_logo.jpg"
+deadly_mention = f"[{MIKASA_USER}](tg://user?id={official_sameer})"
+deadly_logo = "./DeadlyBot/resources/pics/DeadlyBot_logo.jpg"
 cjb = "./DeadlyBot/resources/pics/cjb.jpg"
 restlo = "./DeadlyBot/resources/pics/rest.jpeg"
 shuru = "./DeadlyBot/resources/pics/shuru.jpg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
-mikasa_ver = __mikasa__
+deadly_ver = __deadly__
 tel_ver = version.__version__
 
 async def get_user_id(ids):
@@ -49,9 +49,9 @@ if "@" in my_group:
     my_group = my_group.replace("@", "")
 
 chnl_link = "https://t.me/deadly_techy"
-mikasa_channel = f"[†hê ʍɨӄǟֆǟ ẞø†]({chnl_link})"
+deadly_channel = f"[†hê ʍɨӄǟֆǟ ẞø†]({chnl_link})"
 grp_link = "https://t.me/Deadly_bot_support"
-mikasa_grp = f"[ʍɨӄǟֆǟ ẞø† Group]({grp_link})"
+deadly_grp = f"[ʍɨӄǟֆǟ ẞø† Group]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {mention} :  To mention the user

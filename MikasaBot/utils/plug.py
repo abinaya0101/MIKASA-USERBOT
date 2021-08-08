@@ -62,10 +62,10 @@ def load_module(shortname):
         mod.DeadlyBot = bot
         mod.edit_or_reply = edit_or_reply
         mod.eor = edit_or_reply
-        mod.delete_mikasa = delete_mikasa
-        mod.eod = delete_mikasa
+        mod.delete_deadly = delete_deadly
+        mod.eod = delete_deadly
         mod.Var = Config
-        mod.admin_cmd = mikasa_cmd
+        mod.admin_cmd = deadly_cmd
         # support for other userbots
         sys.modules["userbot.utils"] = DeadlyBot.utils
         sys.modules["userbot"] = DeadlyBot

@@ -10,12 +10,12 @@ from telethon.tl.functions.channels import InviteToChannelRequest, JoinChannelRe
 from DeadlyBot import LOGS, bot, tbot
 from DeadlyBot.config import Config
 from DeadlyBot.utils import load_module
-from DeadlyBot.version import __mikasa__ as mikasaver
+from DeadlyBot.version import __deadly__ as deadlyver
 hl = Config.HANDLER
 MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 
 # let's get the bot ready
-async def mikasa_bot(bot_token):
+async def deadly_bot(bot_token):
     try:
         await bot.start(bot_token)
         bot.me = await bot.get_me()
@@ -38,7 +38,7 @@ else:
             ).start(bot_token=Config.BOT_TOKEN)
             LOGS.info("Checking Completed. Proceeding to next step...")
             LOGS.info("🔰 Starting DeadlyBot 🔰")
-            bot.loop.run_until_complete(mikasa_bot(Config.BOT_USERNAME))
+            bot.loop.run_until_complete(deadly_bot(Config.BOT_USERNAME))
             LOGS.info("🔥 DeadlyBot Startup Completed 🔥")
         else:
             bot.start()
@@ -81,13 +81,13 @@ LOGS.info(
 )
 
 # that's life...
-async def mikasa_is_on():
+async def deadly_is_on():
     try:
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
                 MIKASA_PIC,
-                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {mikasaver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/deadly_techy) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/Deadly_bot_support) for any query regarding ʍɨӄǟֆǟ ẞø†",
+                caption=f"#START \n\nDeployed ʍɨӄǟֆǟ ẞø† Successfully\n\n**ʍɨӄǟֆǟ ẞø† - {deadlyver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [ʍɨӄǟֆǟ ẞø† Channel](t.me/deadly_techy) for Updates & [ʍɨӄǟֆǟ ẞø† Chat](t.me/Deadly_bot_support) for any query regarding ʍɨӄǟֆǟ ẞø†",
             )
     except Exception as e:
         LOGS.info(str(e))
@@ -105,7 +105,7 @@ async def mikasa_is_on():
 #        pass
 
 
-bot.loop.create_task(mikasa_is_on())
+bot.loop.create_task(deadly_is_on())
 
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()

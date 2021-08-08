@@ -18,10 +18,10 @@ HELL_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
 HELL_FIRST = (
     "**🔥 ʍɨӄǟֆǟ ẞø† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**Please Choose Why You Are Here!!**".format(mikasa_mention, CSTM_PMP)
+    "{}\n\n**Please Choose Why You Are Here!!**".format(deadly_mention, CSTM_PMP)
 )
 
-@bot.on(mikasa_cmd(pattern="block$"))
+@bot.on(deadly_cmd(pattern="block$"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -77,7 +77,7 @@ if PM_ON_OFF != "DISABLE":
             if not event.chat_id in PM_WARNS:
                 pm_sql.approve(event.chat_id, "outgoing")
                 
-    @bot.on(mikasa_cmd(pattern="(a|approve|allow)$"))
+    @bot.on(deadly_cmd(pattern="(a|approve|allow)$"))
     async def approve(event):
         if event.fwd_from:
             return
@@ -118,7 +118,7 @@ if PM_ON_OFF != "DISABLE":
                 await event.edit('User Already Approved !')
                 await event.delete()
 
-    @bot.on(mikasa_cmd(pattern="(da|disapprove|disallow)$"))
+    @bot.on(deadly_cmd(pattern="(da|disapprove|disallow)$"))
     async def dapprove(event):
         if event.fwd_from:
             return
@@ -161,7 +161,7 @@ if PM_ON_OFF != "DISABLE":
                 await event.delete()    
                 
                 
-    @bot.on(mikasa_cmd(pattern="listapproved$"))
+    @bot.on(deadly_cmd(pattern="listapproved$"))
     async def approve_p_m(event):
         if event.fwd_from:
             return

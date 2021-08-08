@@ -12,12 +12,12 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
 from . import *
 
 
-path = "./mikasamify/"
+path = "./deadlymify/"
 if not os.path.isdir(path):
     os.makedirs(path)
 
 
-@bot.on(mikasa_cmd(pattern="mmf ?(.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="mmf ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="mmf ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -42,35 +42,35 @@ async def _(event):
     os.remove(webp_file)
 
 
-@bot.on(mikasa_cmd(pattern="mms ?(.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="mms ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="mms ?(.*)", allow_sudo=True))
-async def sed(mikasaboy):
-    if mikasaboy.fwd_from:
+async def sed(deadlyboy):
+    if deadlyboy.fwd_from:
         return
-    if not mikasaboy.reply_to_msg_id:
-        await eod(mikasaboy, "You need to reply to an image with .mms` 'text on top' ; 'text on bottom'")
+    if not deadlyboy.reply_to_msg_id:
+        await eod(deadlyboy, "You need to reply to an image with .mms` 'text on top' ; 'text on bottom'")
         return
-    await eor(mikasaboy, "🤪 **Memifying...**")
-    reply = await mikasaboy.get_reply_message()
+    await eor(deadlyboy, "🤪 **Memifying...**")
+    reply = await deadlyboy.get_reply_message()
     imgs = await bot.download_media(reply.media, path)
     img = cv2.VideoCapture(imgs) 
     tal, semx = img.read()
     cv2.imwrite("kraken.webp", semx)
-    text = mikasaboy.pattern_match.group(1)
+    text = deadlyboy.pattern_match.group(1)
     photo = await draw_meme("kraken.webp", text)
-    await mikasaboy.client.send_file(
-        mikasaboy.chat_id, photo, reply_to=mikasaboy.reply_to_msg_id
+    await deadlyboy.client.send_file(
+        deadlyboy.chat_id, photo, reply_to=deadlyboy.reply_to_msg_id
     )
-    await mikasaboy.delete()
+    await deadlyboy.delete()
     shutil.rmtree(path)
     os.remove("kraken.webp")
     os.remove(photo)
     
-@bot.on(mikasa_cmd(pattern="doge(?: |$)(.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="doge(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="doge(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
-    mikasa = kraken.pattern_match.group(1)
-    if not mikasa:
+    deadly = kraken.pattern_match.group(1)
+    if not deadly:
         if kraken.is_reply:
             (await kraken.get_reply_message()).message
         else:
@@ -79,7 +79,7 @@ async def nope(kraken):
             else:
                 return await eor(kraken, "Doge need some text to make sticker.")
 
-    troll = await bot.inline_query("DogeStickerBot", f"{(deEmojify(mikasa))}")
+    troll = await bot.inline_query("DogeStickerBot", f"{(deEmojify(deadly))}")
     if troll:
         await kraken.delete()
         hel_ = await troll[0].click(Config.LOGGER_ID)
@@ -94,11 +94,11 @@ async def nope(kraken):
      await eod(kraken, "Error 404:  Not Found")
 
 
-@bot.on(mikasa_cmd(pattern="gg(?: |$)(.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="gg(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="gg(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
-    mikasa = kraken.pattern_match.group(1)
-    if not mikasa:
+    deadly = kraken.pattern_match.group(1)
+    if not deadly:
         if kraken.is_reply:
             (await kraken.get_reply_message()).message
         else:
@@ -107,7 +107,7 @@ async def nope(kraken):
             else:
                 return await eor(kraken, "Doge need some text to make sticker.")
 
-    troll = await bot.inline_query("GooglaxBot", f"{(deEmojify(mikasa))}")
+    troll = await bot.inline_query("GooglaxBot", f"{(deEmojify(deadly))}")
     if troll:
         await kraken.delete()
         hel_ = await troll[0].click(Config.LOGGER_ID)
@@ -123,9 +123,9 @@ async def nope(kraken):
 
     
 CmdHelp("memify").add_command(
-  "mmf", "<reply to a img/stcr/gif> <upper text> ; <lower text>", "Memifies the replied image/gif/sticker with your text and sends output in sticker format.", "mmf <reply to a img/stcr/gif> hii ; mikasao"
+  "mmf", "<reply to a img/stcr/gif> <upper text> ; <lower text>", "Memifies the replied image/gif/sticker with your text and sends output in sticker format.", "mmf <reply to a img/stcr/gif> hii ; deadlyo"
 ).add_command(
-  "mms", "<reply to a img/stcr/gif> <upper text> ; <lower text>", "Memifies the replied image/gif/sticker with your text and sends output in image format.", "mms <reply to a img/stcr/gif> hii ; mikasao"
+  "mms", "<reply to a img/stcr/gif> <upper text> ; <lower text>", "Memifies the replied image/gif/sticker with your text and sends output in image format.", "mms <reply to a img/stcr/gif> hii ; deadlyo"
 ).add_command(
   "doge", "<text>", "Makes A Sticker of Doge with given text."
 ).add_command(

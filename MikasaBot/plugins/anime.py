@@ -67,7 +67,7 @@ async def formatJSON(outData):
         return msg
 
 
-@bot.on(mikasa_cmd(pattern="anilist (.*)"))
+@bot.on(deadly_cmd(pattern="anilist (.*)"))
 @bot.on(sudo_cmd(pattern="anilist (.*)", allow_sudo=True))
 async def anilist(event):
     if event.fwd_from:
@@ -79,11 +79,11 @@ async def anilist(event):
     await event.edit(msg, link_preview=True)
 
 
-@bot.on(mikasa_cmd(pattern="anime(?: |$)(.*)"))
+@bot.on(deadly_cmd(pattern="anime(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))
 async def nope(hel_):
-    mikasa = hel_.pattern_match.group(1)
-    if not mikasa:
+    deadly = hel_.pattern_match.group(1)
+    if not deadly:
         if hel_.is_reply:
             (await hel_.get_reply_message()).message
         else:
@@ -91,7 +91,7 @@ async def nope(hel_):
             )
             return
 
-    troll = await bot.inline_query("AniFluidbot", f".anime {(deEmojify(mikasa))}")
+    troll = await bot.inline_query("AniFluidbot", f".anime {(deEmojify(deadly))}")
 
     await troll[0].click(
         hel_.chat_id,
@@ -102,11 +102,11 @@ async def nope(hel_):
     await hel_.delete()
     
     
-@bot.on(mikasa_cmd(pattern="manga(?: |$)(.*)"))
+@bot.on(deadly_cmd(pattern="manga(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="manga(?: |$)(.*)", allow_sudo=True))
 async def nope(hel_):
-    mikasa = hel_.pattern_match.group(1)
-    if not mikasa:
+    deadly = hel_.pattern_match.group(1)
+    if not deadly:
         if hel_.is_reply:
             (await hel_.get_reply_message()).message
         else:
@@ -114,7 +114,7 @@ async def nope(hel_):
             )
             return
 
-    troll = await bot.inline_query("AniFluidbot", f".manga {(deEmojify(mikasa))}")
+    troll = await bot.inline_query("AniFluidbot", f".manga {(deEmojify(deadly))}")
 
     await troll[0].click(
         hel_.chat_id,
@@ -125,11 +125,11 @@ async def nope(hel_):
     await hel_.delete()
     
 
-@bot.on(mikasa_cmd(pattern="character(?: |$)(.*)"))
+@bot.on(deadly_cmd(pattern="character(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="character(?: |$)(.*)", allow_sudo=True))
 async def nope(hel_):
-    mikasa = hel_.pattern_match.group(1)
-    if not mikasa:
+    deadly = hel_.pattern_match.group(1)
+    if not deadly:
         if hel_.is_reply:
             (await hel_.get_reply_message()).message
         else:
@@ -137,7 +137,7 @@ async def nope(hel_):
             )
             return
 
-    troll = await bot.inline_query("AniFluidbot", f".character {(deEmojify(mikasa))}")
+    troll = await bot.inline_query("AniFluidbot", f".character {(deEmojify(deadly))}")
 
     await troll[0].click(
         hel_.chat_id,

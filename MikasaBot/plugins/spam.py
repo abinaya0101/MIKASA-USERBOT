@@ -10,7 +10,7 @@ from . import *
 SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID
 
-@bot.on(mikasa_cmd(pattern="spam (.*)"))
+@bot.on(deadly_cmd(pattern="spam (.*)"))
 @bot.on(sudo_cmd(pattern="spam (.*)", allow_sudo=True))
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -24,22 +24,22 @@ async def spammer(e):
         )
 
 
-@bot.on(mikasa_cmd(pattern="bigspam"))
+@bot.on(deadly_cmd(pattern="bigspam"))
 @bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
-async def bigspam(mikasa):
-    if not mikasa.text[0].isalpha() and mikasa.text[0] not in ("/", "#", "@", "!"):
-        mikasa_msg = mikasa.text
-        DeadlyBot_count = int(mikasa_msg[9:13])
-        mikasa_spam = str(mikasa.text[13:])
+async def bigspam(deadly):
+    if not deadly.text[0].isalpha() and deadly.text[0] not in ("/", "#", "@", "!"):
+        deadly_msg = deadly.text
+        DeadlyBot_count = int(deadly_msg[9:13])
+        deadly_spam = str(deadly.text[13:])
         for i in range(1, DeadlyBot_count):
-            await mikasa.respond(mikasa_spam)
-        await mikasa.delete()
-        await mikasa.client.send_message(
-                lg_id, f"#BIGSPAM \n\nBigspammed  `{mikasa_count}`  messages !!"
+            await deadly.respond(deadly_spam)
+        await deadly.delete()
+        await deadly.client.send_message(
+                lg_id, f"#BIGSPAM \n\nBigspammed  `{deadly_count}`  messages !!"
         )
 
 
-@bot.on(mikasa_cmd("dspam (.*)"))
+@bot.on(deadly_cmd("dspam (.*)"))
 @bot.on(sudo_cmd(pattern="dspam (.*)", allow_sudo=True))
 async def spammer(e):
     if e.fwd_from:
@@ -54,7 +54,7 @@ async def spammer(e):
         await asyncio.sleep(spamDelay)
 
 
-@bot.on(mikasa_cmd(pattern="mspam (.*)"))
+@bot.on(deadly_cmd(pattern="mspam (.*)"))
 @bot.on(sudo_cmd(pattern="mspam (.*)", allow_sudo=True))
 async def tiny_pic_spam(e):
     sender = await e.get_sender()

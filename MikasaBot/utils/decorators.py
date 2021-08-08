@@ -21,7 +21,7 @@ from DeadlyBot.helpers import *
 from DeadlyBot.config import Config
 
 # admin cmd or normal user cmd
-def mikasa_cmd(pattern=None, command=None, **args):
+def deadly_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
@@ -42,12 +42,12 @@ def mikasa_cmd(pattern=None, command=None, **args):
                 CMD_LIST.update({file_test: [cmd]})
         else:
             if len(Config.HANDLER) == 2:
-                mikasareg = "^" + Config.HANDLER
+                deadlyreg = "^" + Config.HANDLER
                 reg = Config.HANDLER[1]
             elif len(Config.HANDLER) == 1:
-                mikasareg = "^\\" + Config.HANDLER
+                deadlyreg = "^\\" + Config.HANDLER
                 reg = Config.HANDLER
-            args["pattern"] = re.compile(mikasareg + pattern)
+            args["pattern"] = re.compile(deadlyreg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -110,12 +110,12 @@ def sudo_cmd(pattern=None, command=None, **args):
                 SUDO_LIST.update({file_test: [cmd]})
         else:
             if len(Config.SUDO_HANDLER) == 2:
-                mikasareg = "^" + Config.SUDO_HANDLER
+                deadlyreg = "^" + Config.SUDO_HANDLER
                 reg = Config.SUDO_HANDLER[1]
             elif len(Config.SUDO_HANDLER) == 1:
-                mikasareg = "^\\" + Config.SUDO_HANDLER
+                deadlyreg = "^\\" + Config.SUDO_HANDLER
                 reg = Config.HANDLER
-            args["pattern"] = re.compile(mikasareg + pattern)
+            args["pattern"] = re.compile(deadlyreg + pattern)
             if command is not None:
                 cmd = reg + command
             else:

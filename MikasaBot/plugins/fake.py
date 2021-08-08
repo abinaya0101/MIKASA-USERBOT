@@ -7,7 +7,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 
 from . import *
 
-@bot.on(mikasa_cmd(pattern="picgen"))
+@bot.on(deadly_cmd(pattern="picgen"))
 @bot.on(sudo_cmd(pattern="picgen", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -19,14 +19,14 @@ async def _(event):
       with open("HELLBOT.jpg", 'wb') as f:
         f.write(response.content)
     
-    captin = f"Fake Image By {mikasa_mention}"
+    captin = f"Fake Image By {deadly_mention}"
     fole = "HELLBOT.jpg"
     await bot.send_file(event.chat_id, fole, caption=captin)
     await event.delete()
     os.system("rm /root/DeadlyBot/HELLBOT.jpg ")
 
 
-@bot.on(mikasa_cmd(pattern="fake ?(.*)"))
+@bot.on(deadly_cmd(pattern="fake ?(.*)"))
 @bot.on(sudo_cmd(pattern="fake ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -39,7 +39,7 @@ async def _(event):
     async with borg.action(event.chat_id, action):
         await asyncio.sleep(86400)  # type for 10 seconds
 
-@bot.on(mikasa_cmd(pattern="gbam$"))
+@bot.on(deadly_cmd(pattern="gbam$"))
 @bot.on(sudo_cmd(pattern="gbam$", allow_sudo=True))
 async def gbun(event):
     if event.fwd_from:

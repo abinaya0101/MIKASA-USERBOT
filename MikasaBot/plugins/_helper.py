@@ -9,24 +9,24 @@ from . import *
 msg = f"""
 **⚡ Lєgєη∂яy Λƒ Mιкαsα ⚡ **
   •        [📑 Repo 📑](https://github.com/TEAM-MIKASA/MIKASA-BOT)
-  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeam-mikasa%2Fmikasa-Bot&template=https%3A%2F%2Fgithub.com%2FTeam-mikasa%2Fmikasa-bot)
-  •  ©️ {mikasa_channel} ™
+  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeam-deadly%2Fdeadly-Bot&template=https%3A%2F%2Fgithub.com%2FTeam-deadly%2Fdeadly-bot)
+  •  ©️ {deadly_channel} ™
 """
 botname = Config.BOT_USERNAME
 
-@bot.on(mikasa_cmd(pattern="repo$"))
+@bot.on(deadly_cmd(pattern="repo$"))
 @bot.on(sudo_cmd(pattern="repo$", allow_sudo=True))
 async def repo(event):
     try:
-        mikasa = await bot.inline_query(botname, "repo")
-        await mikasa[0].click(event.chat_id)
+        deadly = await bot.inline_query(botname, "repo")
+        await deadly[0].click(event.chat_id)
         if event.sender_id == official_sameer:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
 
 
-@bot.on(mikasa_cmd(pattern="help ?(.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="help ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="help ?(.*)", allow_sudo=True))
 async def yardim(event):
     if event.fwd_from:
@@ -49,7 +49,7 @@ async def yardim(event):
         await eor(event, "**⚠️ ERROR !!** \nPlease Re-Check BOT_TOKEN & BOT_USERNAME on Heroku.")
 
 
-@bot.on(mikasa_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
 async def deadlybot(event):
     if event.fwd_from:

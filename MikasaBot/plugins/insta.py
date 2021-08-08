@@ -9,7 +9,7 @@ from . import *
 
 
 
-@bot.on(mikasa_cmd(pattern="insta (.*)"))
+@bot.on(deadly_cmd(pattern="insta (.*)"))
 @bot.on(sudo_cmd(pattern="insta (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -37,7 +37,7 @@ async def _(event):
             output_op,
         )
         await final.edit(
-            f"📥 InstaGram Video Downloaded By :- {mikasa_mention}")
+            f"📥 InstaGram Video Downloaded By :- {deadly_mention}")
     await event.client.delete_messages(
         conv.chat_id, [first.id, response.id, second.id, output_op.id, last.id]
     )

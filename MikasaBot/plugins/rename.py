@@ -36,12 +36,12 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@bot.on(mikasa_cmd(pattern="rename (.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="rename (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="rename (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    mikasa = await eor(event, 
+    deadly = await eor(event, 
         "Renaming in progress...\nThis might take some time if file is big. 🥴"
     )
     input_str = event.pattern_match.group(1)
@@ -60,15 +60,15 @@ async def _(event):
         end = datetime.datetime.now()
         ms = (end - start).seconds
         if os.path.exists(downloaded_file_name):
-            await mikasa.edit("Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
+            await deadly.edit("Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
             )
         else:
-            await eod(mikasa, "Error Occurred\n {}".format(input_str))
+            await eod(deadly, "Error Occurred\n {}".format(input_str))
     else:
-        await eod(mikasa, f"Syntax `{hl}rename file.name` as reply to a Telegram media")
+        await eod(deadly, f"Syntax `{hl}rename file.name` as reply to a Telegram media")
 
 
-@bot.on(mikasa_cmd(pattern="rnupload (.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="rnupload (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="rnupload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -76,7 +76,7 @@ async def _(event):
     thumb = None
     if os.path.exists(thumb_image_path):
         thumb = thumb_image_path
-    mikasa = await eor(event, 
+    deadly = await eor(event, 
         "Renaming And Uploading File..."
     )
     input_str = event.pattern_match.group(1)
@@ -107,22 +107,22 @@ async def _(event):
             end_two = datetime.datetime.now()
             os.remove(downloaded_file_name)
             ms_two = (end_two - end).seconds
-            await mikasa.edit("Downloaded in {} seconds. Uploaded in {} seconds.".format(
+            await deadly.edit("Downloaded in {} seconds. Uploaded in {} seconds.".format(
                     ms_one, ms_two
                 )
             )
         else:
             await eod(event, "File Not Found {}".format(input_str))
     else:
-        await mikasa.edit("Syntax // `{}rnupload file.name` as reply to a Telegram media".format(hl))
+        await deadly.edit("Syntax // `{}rnupload file.name` as reply to a Telegram media".format(hl))
 
 
-@bot.on(mikasa_cmd(pattern="rnsupload (.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="rnsupload (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="rnsupload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    mikasa = await eor(event, 
+    deadly = await eor(event, 
         "Rename & Upload as streamable format is in progress..."
     )
     input_str = event.pattern_match.group(1)
@@ -187,19 +187,19 @@ async def _(event):
                     ],
                 )
             except Exception as e:
-                await mikasa.edit(event, str(e))
+                await deadly.edit(event, str(e))
             else:
                 end = datetime.datetime.now()
                 os.remove(downloaded_file_name)
                 ms_two = (end - end_one).seconds
-                await mikasa.edit("Downloaded in {} seconds. Uploaded in {} seconds.".format(
+                await deadly.edit("Downloaded in {} seconds. Uploaded in {} seconds.".format(
                         ms_one, ms_two
                     )
                 )
         else:
-            await eod(mikasa, "File Not Found {}".format(input_str))
+            await eod(deadly, "File Not Found {}".format(input_str))
     else:
-        await mikasa.edit(
+        await deadly.edit(
             "Syntax // .rnsupload file.name as reply to a Telegram media"
         )
 

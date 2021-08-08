@@ -7,14 +7,14 @@ from telethon.tl.types import Channel, Chat, User
 from . import *
 
 
-@bot.on(mikasa_cmd(pattern="stats$"))
+@bot.on(deadly_cmd(pattern="stats$"))
 @bot.on(sudo_cmd(pattern="stats$", allow_sudo=True))
 async def stats(
     event: NewMessage.Event,
 ) -> None:  # pylint: disable = R0912, R0914, R0915
     if event.fwd_from:
         return
-    mikasa = await edit_or_reply(event, "`Collecting stats...`")
+    deadly = await edit_or_reply(event, "`Collecting stats...`")
     start_time = time.time()
     private_chats = 0
     bots = 0
@@ -80,9 +80,9 @@ async def stats(
     response += f"🔱 **Unread Mentions:** {unread_mentions} \n\n"
     response += f"☣️   __It Took:__ {stop_time:.02f}s \n"
     response += (
-        f"📌 **From The DataBase Of** :- {mikasa_channel}"
+        f"📌 **From The DataBase Of** :- {deadly_channel}"
     )
-    await mikasa.edit(response)
+    await deadly.edit(response)
 
 
 def make_mention(user):

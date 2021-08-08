@@ -112,7 +112,7 @@ async def draw_meme_text(image_path, text):
             )
             current_h += u_height + pad
 
-    image_name = "mikasa.webp"
+    image_name = "deadly.webp"
     img.save(image_name, "WebP")
     return image_name
 

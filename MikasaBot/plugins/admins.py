@@ -50,7 +50,7 @@ MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
 UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 
 
-@bot.on(mikasa_cmd(pattern="setgpic$"))
+@bot.on(deadly_cmd(pattern="setgpic$"))
 @bot.on(sudo_cmd(pattern="setgpic$", allow_sudo=True))
 @errors_handler
 async def set_group_photo(gpic):
@@ -97,7 +97,7 @@ async def set_group_photo(gpic):
             )
 
 
-@bot.on(mikasa_cmd(pattern="promote(?: |$)(.*)"))
+@bot.on(deadly_cmd(pattern="promote(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def promote(promt):
@@ -117,7 +117,7 @@ async def promote(promt):
         delete_messages=True,
         pin_messages=True,
     )
-    mikasaevent = await eor(promt, "`Promoting User...`")
+    deadlyevent = await eor(promt, "`Promoting User...`")
     user, rank = await get_user_from_event(promt)
     if not rank:
         rank = "ǟɖʍɨռ"
@@ -125,9 +125,9 @@ async def promote(promt):
         return
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await mikasaevent.edit(f"**🔥 Promoted  [{user.first_name}](tg://user?id={user.id})  Successfully In**  `{promt.chat.title}`!! \n**Admin Tag :**  `{rank}`")
+        await deadlyevent.edit(f"**🔥 Promoted  [{user.first_name}](tg://user?id={user.id})  Successfully In**  `{promt.chat.title}`!! \n**Admin Tag :**  `{rank}`")
     except BadRequestError:
-        await mikasaevent.edit(NO_PERM)
+        await deadlyevent.edit(NO_PERM)
         return
     await promt.client.send_message(
         lg_id,
@@ -137,7 +137,7 @@ async def promote(promt):
     )
 
 
-@bot.on(mikasa_cmd(pattern="demote(?: |$)(.*)"))
+@bot.on(deadly_cmd(pattern="demote(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="demote(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def demote(dmod):
@@ -149,7 +149,7 @@ async def demote(dmod):
     if not admin and not creator:
         await eor(dmod, NO_ADMIN)
         return
-    mikasaevent = await eor(dmod, "`Demoting User...`")
+    deadlyevent = await eor(dmod, "`Demoting User...`")
     rank = "ǟɖʍɨռ"
     user = await get_user_from_event(dmod)
     user = user[0]
@@ -166,9 +166,9 @@ async def demote(dmod):
     try:
         await dmod.client(EditAdminRequest(dmod.chat_id, user.id, newrights, rank))
     except BadRequestError:
-        await mikasaevent.edit(NO_PERM)
+        await deadlyevent.edit(NO_PERM)
         return
-    await mikasaevent.edit(f"**😪 Demoted  [{user.first_name}](tg://user?id={user.id})  Successfully In**  `{dmod.chat.title}`")
+    await deadlyevent.edit(f"**😪 Demoted  [{user.first_name}](tg://user?id={user.id})  Successfully In**  `{dmod.chat.title}`")
     await dmod.client.send_message(
         lg_id,
         "#DEMOTE\n"
@@ -185,63 +185,63 @@ async def watcher(event):
             LOGS.info(str(e))
 
 
-@bot.on(mikasa_cmd(pattern=r"mute ?(.*)"))
+@bot.on(deadly_cmd(pattern=r"mute ?(.*)"))
 @bot.on(sudo_cmd(pattern=r"mute ?(.*)", allow_sudo=True))
-async def muth(mikasa):
-    if mikasa.is_private:
-        await eor(mikasa, "**Enough of your bullshit  !!**")
+async def muth(deadly):
+    if deadly.is_private:
+        await eor(deadly, "**Enough of your bullshit  !!**")
         await sleep(2)
-        await mikasa.get_reply_message()
-        replied_user = await mikasa.client(GetFullUserRequest(mikasa.chat_id))
-        if is_muted(mikasa.chat_id, mikasa.chat_id):
-            return await mikasa.edit(
+        await deadly.get_reply_message()
+        replied_user = await deadly.client(GetFullUserRequest(deadly.chat_id))
+        if is_muted(deadly.chat_id, deadly.chat_id):
+            return await deadly.edit(
                 "Nigga is already muted here 🥴"
             )
-        if mikasa.chat_id == official_sameer:
-            return await eod(mikasa, "Nashe me hai kya lawde 🥴")
+        if deadly.chat_id == official_sameer:
+            return await eod(deadly, "Nashe me hai kya lawde 🥴")
         try:
-            mute(mikasa.chat_id, mikasa.chat_id)
+            mute(deadly.chat_id, deadly.chat_id)
         except Exception as e:
-            await eor(mikasa, f"**Error **\n`{str(e)}`")
+            await eor(deadly, f"**Error **\n`{str(e)}`")
         else:
-            await eor(mikasa, "**Chup Reh Lawde 🥴\n`**｀-´)⊃━☆ﾟ.*･｡ﾟ **`")
+            await eor(deadly, "**Chup Reh Lawde 🥴\n`**｀-´)⊃━☆ﾟ.*･｡ﾟ **`")
     else:
-        mikasaevent = await eor(mikasa, "`Muting...`")
-        input_str = mikasa.pattern_match.group(1)
-        chat = await mikasa.get_chat()
-        if mikasa.reply_to_msg_id:
-            userid = (await mikasa.get_reply_message()).sender_id
-            name = (await mikasa.client.get_entity(userid)).first_name
+        deadlyevent = await eor(deadly, "`Muting...`")
+        input_str = deadly.pattern_match.group(1)
+        chat = await deadly.get_chat()
+        if deadly.reply_to_msg_id:
+            userid = (await deadly.get_reply_message()).sender_id
+            name = (await deadly.client.get_entity(userid)).first_name
         elif input_str:
             if input_str.isdigit():
                 try:
                     userid = input_str
-                    name = (await mikasa.client.get_entity(userid)).first_name
+                    name = (await deadly.client.get_entity(userid)).first_name
                 except ValueError as ve:
-                    return await mikasaevent.edit(str(ve))
+                    return await deadlyevent.edit(str(ve))
             else:
-                userid = (await mikasa.client.get_entity(input_str)).id
-                name = (await mikasa.client.get_entity(userid)).first_name
+                userid = (await deadly.client.get_entity(input_str)).id
+                name = (await deadly.client.get_entity(userid)).first_name
         else:
-            return await eod(mikasaevent, "I Need a user to mute!!", 5)
+            return await eod(deadlyevent, "I Need a user to mute!!", 5)
         if userid == official_sameer:
-            return await eod(mikasaevent, "Nashe me hai kya lawde", 5)
+            return await eod(deadlyevent, "Nashe me hai kya lawde", 5)
         if str(userid) in DEVLIST:
-            return await eod(mikasaevent, "**Error Muting God**", 7)
+            return await eod(deadlyevent, "**Error Muting God**", 7)
         try:
-            await mikasa.client.edit_permissions(
+            await deadly.client.edit_permissions(
                 chat.id,
                 userid,
                 until_date=None,
                 send_messages=False,
             )
             await eor(
-                mikasaevent,
+                deadlyevent,
                 f"**Successfully Muted**  [{name}](tg://user?id={userid}) **in**  `{chat.title}`",
             )
         except BaseException as be:
-            await eor(mikasaevent, f"`{str(be)}`")
-        await mikasa.client.send_message(
+            await eor(deadlyevent, f"`{str(be)}`")
+        await deadly.client.send_message(
             lg_id,
             "#MUTE\n"
             f"\nUSER:  [{name}](tg://user?id={userid})\n"
@@ -249,7 +249,7 @@ async def muth(mikasa):
         )
         
         
-@bot.on(mikasa_cmd(pattern=r"unmute ?(.*)"))
+@bot.on(deadly_cmd(pattern=r"unmute ?(.*)"))
 @bot.on(sudo_cmd(pattern=r"unmute ?(.*)", allow_sudo=True))
 async def nomuth(evn):
     if evn.is_private:
@@ -269,7 +269,7 @@ async def nomuth(evn):
                 "Abb boll bsdk."
             )
     else:
-        mikasaevent = await eor(evn, "`Unmuting...`")
+        deadlyevent = await eor(evn, "`Unmuting...`")
         input_str = evn.pattern_match.group(1)
         chat = await evn.get_chat()
         if evn.reply_to_msg_id:
@@ -281,12 +281,12 @@ async def nomuth(evn):
                     userid = input_str
                     name = (await evn.client.get_entity(userid)).first_name
                 except ValueError as ve:
-                    return await mikasaevent.edit(str(ve))
+                    return await deadlyevent.edit(str(ve))
             else:
                 userid = (await evn.client.get_entity(input_str)).id
                 name = (await evn.client.get_entity(userid)).first_name
         else:
-            return await eod(mikasaevent, "I need a user to unmute!!", 3)
+            return await eod(deadlyevent, "I need a user to unmute!!", 3)
         try:
             await evn.client.edit_permissions(
                 chat.id,
@@ -295,11 +295,11 @@ async def nomuth(evn):
                 send_messages=True,
             )
             await eor(
-                mikasaevent,
+                deadlyevent,
                 f"**Successfully Unmuted**  [{name}](tg://user?id={userid}) **in**  `{chat.title}`",
             )
         except BaseException as be:
-            await eor(mikasaevent, f"`{str(be)}`")
+            await eor(deadlyevent, f"`{str(be)}`")
         await evn.client.send_message(
             lg_id,
             "#UNMUTE\n"
@@ -308,13 +308,13 @@ async def nomuth(evn):
         )
 
 
-@bot.on(mikasa_cmd(pattern="ban(?: |$)(.*)"))
+@bot.on(deadly_cmd(pattern="ban(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="ban(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def ban(bon):
     if bon.fwd_from:
         return
-    mikasaevent = await eor(bon, "`Banning Nigga...`")
+    deadlyevent = await eor(bon, "`Banning Nigga...`")
     chat = await bon.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
@@ -323,25 +323,25 @@ async def ban(bon):
         return
     user, reason = await get_user_from_event(bon)
     if not user:
-        return await mikasaevent.edit("`Reply to a user or give username!!`")
+        return await deadlyevent.edit("`Reply to a user or give username!!`")
     if str(user.id) in DEVLIST:
-        return await mikasaevent.edit("**Say again? Ban my creator??**")
+        return await deadlyevent.edit("**Say again? Ban my creator??**")
     try:
         await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
-        await mikasaevent.edit(NO_PERM)
+        await deadlyevent.edit(NO_PERM)
         return
     try:
         reply = await bon.get_reply_message()
         if reply:
             await reply.delete()
     except BadRequestError:
-        await mikasaevent.edit(f"**Banned  [{user.first_name}](tg://user?id={user.id})  in** `[{bon.chat.title}]` !!\n\nMessage Nuking : **False**")
+        await deadlyevent.edit(f"**Banned  [{user.first_name}](tg://user?id={user.id})  in** `[{bon.chat.title}]` !!\n\nMessage Nuking : **False**")
         return
     if reason:
-        await mikasaevent.edit(f"**Bitch** [{user.first_name}](tg://user?id={user.id}) **is now banned in**  `[{bon.chat.title}]` !!\n**Reason :** `{reason}`")
+        await deadlyevent.edit(f"**Bitch** [{user.first_name}](tg://user?id={user.id}) **is now banned in**  `[{bon.chat.title}]` !!\n**Reason :** `{reason}`")
     else:
-        await mikasaevent.edit(f"**Bitch** [{user.first_name}](tg://user?id={user.id}) **is now banned in**  `[{bon.chat.title}]`!!")
+        await deadlyevent.edit(f"**Bitch** [{user.first_name}](tg://user?id={user.id}) **is now banned in**  `[{bon.chat.title}]`!!")
     await bon.client.send_message(
         lg_id,
         "#BAN\n"
@@ -350,7 +350,7 @@ async def ban(bon):
     )
 
 
-@bot.on(mikasa_cmd(pattern="unban(?: |$)(.*)"))
+@bot.on(deadly_cmd(pattern="unban(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="unban(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def nothanos(unbon):
@@ -362,14 +362,14 @@ async def nothanos(unbon):
     if not admin and not creator:
         await eor(unbon, NO_ADMIN)
         return
-    mikasaevent = await eor(unbon, "`Unbanning...`")
+    deadlyevent = await eor(unbon, "`Unbanning...`")
     user = await get_user_from_event(unbon)
     user = user[0]
     if not user:
         return
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await mikasaevent.edit(f"[{user.first_name}](tg://user?id={user.id}) **Is Now Unbanned in**  `{unbon.chat.title}` !!")
+        await deadlyevent.edit(f"[{user.first_name}](tg://user?id={user.id}) **Is Now Unbanned in**  `{unbon.chat.title}` !!")
         await unbon.client.send_message(
             lg_id,
             "#UNBAN\n"
@@ -377,10 +377,10 @@ async def nothanos(unbon):
             f"CHAT: {unbon.chat.title}(`{unbon.chat_id}`)",
         )
     except UserIdInvalidError:
-        await mikasaevent.edit("Invalid UserId!! Please Recheck it!!")
+        await deadlyevent.edit("Invalid UserId!! Please Recheck it!!")
 
 
-@bot.on(mikasa_cmd(pattern="pin($| (.*))"))
+@bot.on(deadly_cmd(pattern="pin($| (.*))"))
 @bot.on(sudo_cmd(pattern="pin($| (.*))", allow_sudo=True))
 @errors_handler
 async def pin(msg):
@@ -422,7 +422,7 @@ async def pin(msg):
         pass
 
 
-@bot.on(mikasa_cmd(pattern="kick(?: |$)(.*)"))
+@bot.on(deadly_cmd(pattern="kick(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="kick(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def kick(usr):
@@ -439,19 +439,19 @@ async def kick(usr):
         return await eor(usr, "`Couldn't fetch user info...`")
     if str(user.id) in DEVLIST:
         return await eor(usr, "**Turn back, Go straight and fuck off!!**")
-    mikasaevent = await eor(usr, "`Kicking...`")
+    deadlyevent = await eor(usr, "`Kicking...`")
     try:
         await usr.client.kick_participant(usr.chat_id, user.id)
         await sleep(0.5)
     except Exception as e:
-        await mikasaevent.edit(NO_PERM + f"\n`{str(e)}`")
+        await deadlyevent.edit(NO_PERM + f"\n`{str(e)}`")
         return
     if reason:
-        await mikasaevent.edit(
+        await deadlyevent.edit(
             f"**🏃 Kicked**  [{user.first_name}](tg://user?id={user.id})'s **Butt from** `{usr.chat.title}!`\nReason: `{reason}`"
         )
     else:
-        await mikasaevent.edit(f"**🏃 Kicked**  [{user.first_name}](tg://user?id={user.id})'s **Butt from** `{usr.chat.title}!`")
+        await deadlyevent.edit(f"**🏃 Kicked**  [{user.first_name}](tg://user?id={user.id})'s **Butt from** `{usr.chat.title}!`")
     await usr.client.send_message(
         lg_id,
         "#KICK\n"
@@ -460,7 +460,7 @@ async def kick(usr):
     )
 
 
-@bot.on(mikasa_cmd(pattern=f"zombies ?(.*)"))
+@bot.on(deadly_cmd(pattern=f"zombies ?(.*)"))
 @bot.on(sudo_cmd(pattern=f"zombies ?(.*)", allow_sudo=True))
 async def rm_deletedacc(show):
     if show.fwd_from:
@@ -515,7 +515,7 @@ async def rm_deletedacc(show):
     )
 
 
-@bot.on(mikasa_cmd(pattern="undlt$"))
+@bot.on(deadly_cmd(pattern="undlt$"))
 @bot.on(sudo_cmd(pattern="undlt$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
