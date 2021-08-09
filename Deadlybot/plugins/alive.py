@@ -22,11 +22,12 @@ DEADLY_CAPTION += f"╠•➳➠ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽:` `{tel_ver}`
 DEADLY_CAPTION += f"╠•➳➠ `𝚅𝙴𝚁𝚂𝙸𝙾𝙽:` `{deadly_ver}`\n"
 DEADLY_CAPTION += f"╠•➳➠ `𝙶𝚁𝙾𝚄𝙿:`  [𝙹𝙾𝙸𝙽](t.me/DEADLY_USERBOT)\n"
 DEADLY_CAPTION += f"╠•➳➠ `𝙲𝙷𝙰𝙽𝙽𝙴𝙻:` [𝙹𝙾𝙸𝙽](t.me/deadly_techy)\n"
-DEADLY_CAPTION += f"╠•➳➠ `𝙲𝚁𝙴𝙰𝚃𝙾𝚁:` [𝙼𝙸𝙺𝙰𝚂𝙰](https://t.me/Deadly_bot_op)\n"
+DEADLY_CAPTION += f"╠•➳➠ `𝙲𝚁𝙴𝙰𝚃𝙾𝚁:` [⚡𝚂𝙰𝙼𝙴𝙴𝚁⚡](https://t.me/official_sameer)\n"
+DEADLY_CAPTION += f"╠•➳➠ `𝙾𝚆𝙽𝙴𝚁:` [⚡𝙳𝙰𝙽𝙸𝚂𝙷 𝙾𝙿⚡](https://t.me/idanishbaba)\n"
 DEADLY_CAPTION += f"╚══════════════════╝\n\n"
-DEADLY_CAPTION += " [⚡𝚁𝙴𝙿𝙾⚡](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT) 🔹 [📜𝙻𝙸𝙲𝙴𝙽𝚂𝙴📜](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/blob/main/LICENSE)"
+DEADLY_CAPTION += " [✨𝚁𝙴𝙿𝙾✨](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT) 🔹 [📜𝙻𝙸𝙲𝙴𝙽𝚂𝙴📜](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/blob/main/LICENSE)"
                             
-                         
+                                      
 #-------------------------------------------------------------------------------
 
 @bot.on(deadly_cmd(outgoing=True, pattern="alive$"))
