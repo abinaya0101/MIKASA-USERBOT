@@ -74,7 +74,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["Deadlybot.plugins." + shortname] = mod
-        LOGS.info("⚡ мιкαѕα вσт ⚡ - Successfully Imported " + shortname)
+        LOGS.info("⚡ Dєα∂ly Bσт ⚡ - Successfully Imported " + shortname)
 
 
 # remove plugins
