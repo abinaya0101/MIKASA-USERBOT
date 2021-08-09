@@ -30,8 +30,8 @@ DEADLY_CAPTION += " [✨𝚁𝙴𝙿𝙾✨](https://github.com/DEADLY-FIGHTERS/
                                       
 #-------------------------------------------------------------------------------
 
-# for Deadlybot
-# ONLY for Deadlybot
+# for DeadlyBot
+# ONLY for DeadlyBot
 # EDITED BY - @SAMEER_795 (SAMEER )
 # KANGERS STAY AWAY
 # JISNE KANG KIYA USKI MA CHOD DI JAYEGI
@@ -42,7 +42,7 @@ DEADLY_CAPTION += " [✨𝚁𝙴𝙿𝙾✨](https://github.com/DEADLY-FIGHTERS/
 
 import time
 
-from userbot import ALIVE_NAME, StartTime, deadlyver
+from userbot import StartTime, deadlyver
 from deadlybot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 ludosudo = Config.SUDO
@@ -61,9 +61,8 @@ async def reply_id(event):
     return reply_to_id
 
 
-DEFAULTUSER = ALIVE_NAME or "Deadly User"
-DEADLY_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "LEGENDRY_AF_DEADLYBOT"
+DEFAULTUSER = Config.YOUR_NAME or "Deadly User"
+DEADLY_PIC = Config.ALIVE_PIC
 
 USERID = bot.uid
 
@@ -108,8 +107,8 @@ async def amireallyalive(alive):
         return
     reply_to_id = await reply_id(alive)
 
-    if DEADLY_IMG:
-        deadly_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
+    if DEADLY_PIC:
+        deadly_caption = f"**{Config.ALIVE_MSG}**\n\n"
         deadly_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"                
         deadly_caption += f"┏━━━━━━━━━━━━━━━━━━━\n"
         deadly_caption += f"┣•➳➠ `Tᴇʟᴇᴛʜᴏɴ:` `{tel_ver}` \n"
