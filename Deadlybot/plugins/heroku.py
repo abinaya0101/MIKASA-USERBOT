@@ -79,7 +79,7 @@ async def variable(deadly):
         capn = "Saved in LOGGER_ID !!"
         try:
             variable = deadly.pattern_match.group(2).split()[0]
-            if variable in ("MIKASA_SESSION", "BOT_TOKEN", "HEROKU_API_KEY"):
+            if variable in ("DEADLY_SESSION", "BOT_TOKEN", "HEROKU_API_KEY"):
                 if Config.ABUSE == "ON":
                     await bot.send_file(deadly.chat_id, cjb, caption=cap)
                     await event.delete()

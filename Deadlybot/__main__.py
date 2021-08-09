@@ -12,7 +12,7 @@ from Deadlybot.config import Config
 from Deadlybot.utils import load_module
 from Deadlybot.version import __deadly__ as deadlyver
 hl = Config.HANDLER
-MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
+DEADLY_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 
 # let's get the bot ready
 async def deadly_bot(bot_token):
@@ -21,7 +21,7 @@ async def deadly_bot(bot_token):
         bot.me = await bot.get_me()
         bot.uid = telethon.utils.get_peer_id(bot.me)
     except Exception as e:
-        LOGS.error(f"MIKASA_SESSION - {str(e)}")
+        LOGS.error(f"DEADLY_SESSION - {str(e)}")
         sys.exit()
 
 
@@ -86,7 +86,7 @@ async def deadly_is_on():
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
-                MIKASA_PIC,
+                DEADLY_PIC,
                 caption=f"#START \n\nDeployed Dєα∂ly Bσт Successfully\n\n**Dєα∂ly Bσт - {deadlyver}**\n\nType `{hl}ping` or `{hl}alive` to check! \n\nJoin [Dєα∂ly Bσт Channel](t.me/deadly_techy) for Updates & [Dєα∂ly Bσт Chat](t.me/deadly_userbot) for any query regarding Dєα∂ly Bσт",
             )
     except Exception as e:

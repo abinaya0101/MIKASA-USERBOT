@@ -39,7 +39,7 @@ async def kk(event):
                 thumb=thumb,
                 reply_to=reply_to_id,
             )
-            await edit_or_reply(deadly_file, f"Output Too Large. This is the file for the list of plugins in bot.\n\n**BY :-** {MIKASA_USER}")
+            await edit_or_reply(deadly_file, f"Output Too Large. This is the file for the list of plugins in bot.\n\n**BY :-** {DEADLY_USER}")
             await event.delete()
 
 

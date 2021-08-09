@@ -8,9 +8,9 @@ from Deadlybot.version import __deadly__
 from telethon import version
 
 
-MIKASA_USER = bot.me.first_name
+DEADLY_USER = bot.me.first_name
 official_sameer = bot.uid
-deadly_mention = f"[{MIKASA_USER}](tg://user?id={official_sameer})"
+deadly_mention = f"[{DEADLY_USER}](tg://user?id={official_sameer})"
 deadly_logo = "./Deadlybot/resources/pics/Deadlybot_logo.jpg"
 cjb = "./Deadlybot/resources/pics/cjb.jpg"
 restlo = "./Deadlybot/resources/pics/rest.jpeg"

@@ -12,19 +12,19 @@ from . import *
 
 #-------------------------------------------------------------------------------
 
-MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-MIKASA_CAPTION = "🔥 ℓєgєи∂яу αf мιкαѕα вσт 🔥\n\n"
-MIKASA_CAPTION += (
+DEADLY_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
+DEADLY_CAPTION = "🔥 ℓєgєи∂яу αf мιкαѕα вσт 🔥\n\n"
+DEADLY_CAPTION += (
     f"                __↼🄼🄰🅂🅃🄴🅁⇀__\n  **『 {Config.YOUR_NAME} 』**\n\n"
 )
-MIKASA_CAPTION += f"╔══════════════════╗\n"
-MIKASA_CAPTION += f"╠•➳➠ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽:` `{tel_ver}` \n"
-MIKASA_CAPTION += f"╠•➳➠ `𝚅𝙴𝚁𝚂𝙸𝙾𝙽:` `{deadly_ver}`\n"
-MIKASA_CAPTION += f"╠•➳➠ `𝙶𝚁𝙾𝚄𝙿:`  [𝙹𝙾𝙸𝙽](t.me/DEADLY_USERBOT)\n"
-MIKASA_CAPTION += f"╠•➳➠ `𝙲𝙷𝙰𝙽𝙽𝙴𝙻:` [𝙹𝙾𝙸𝙽](t.me/deadly_techy)\n"
-MIKASA_CAPTION += f"╠•➳➠ `𝙲𝚁𝙴𝙰𝚃𝙾𝚁:` [𝙼𝙸𝙺𝙰𝚂𝙰](https://t.me/Deadly_bot_op)\n"
-MIKASA_CAPTION += f"╚══════════════════╝\n\n"
-MIKASA_CAPTION += " [⚡𝚁𝙴𝙿𝙾⚡](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT) 🔹 [📜𝙻𝙸𝙲𝙴𝙽𝚂𝙴📜](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/blob/main/LICENSE)"
+DEADLY_CAPTION += f"╔══════════════════╗\n"
+DEADLY_CAPTION += f"╠•➳➠ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽:` `{tel_ver}` \n"
+DEADLY_CAPTION += f"╠•➳➠ `𝚅𝙴𝚁𝚂𝙸𝙾𝙽:` `{deadly_ver}`\n"
+DEADLY_CAPTION += f"╠•➳➠ `𝙶𝚁𝙾𝚄𝙿:`  [𝙹𝙾𝙸𝙽](t.me/DEADLY_USERBOT)\n"
+DEADLY_CAPTION += f"╠•➳➠ `𝙲𝙷𝙰𝙽𝙽𝙴𝙻:` [𝙹𝙾𝙸𝙽](t.me/deadly_techy)\n"
+DEADLY_CAPTION += f"╠•➳➠ `𝙲𝚁𝙴𝙰𝚃𝙾𝚁:` [𝙼𝙸𝙺𝙰𝚂𝙰](https://t.me/Deadly_bot_op)\n"
+DEADLY_CAPTION += f"╚══════════════════╝\n\n"
+DEADLY_CAPTION += " [⚡𝚁𝙴𝙿𝙾⚡](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT) 🔹 [📜𝙻𝙸𝙲𝙴𝙽𝚂𝙴📜](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/blob/main/LICENSE)"
                             
                          
 #-------------------------------------------------------------------------------
@@ -36,7 +36,7 @@ async def up(deadly):
         return
     await deadly.get_chat()
     await deadly.delete()
-    await bot.send_file(deadly.chat_id, MIKASA_PIC, caption=MIKASA_CAPTION)
+    await bot.send_file(deadly.chat_id, DEADLY_PIC, caption=DEADLY_CAPTION)
     await deadly.delete()
 
 msg = f"""
