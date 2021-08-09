@@ -42,7 +42,7 @@ DEADLY_CAPTION += " [✨𝚁𝙴𝙿𝙾✨](https://github.com/DEADLY-FIGHTERS/
 
 import time
 
-from userbot import StartTime, deadlyver
+from userbot import StartTime
 from deadlybot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 ludosudo = Config.SUDO
@@ -127,9 +127,9 @@ async def amireallyalive(alive):
         await edit_or_reply(
             alive,
             f"┏━━━━━━━━━━━━━━━━━━━\n"
-            f"┣•➳➠ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽:` `{tel_ver}` \n"
-            f"┣•➳➠ `𝚅𝙴𝚁𝚂𝙸𝙾𝙽:` `{deadly_ver}`\n"
-            f"┣•➳➠ `𝙰𝙱𝚄𝚂𝙴:` `{abuse_m}`\n"
+            f"┣•➳➠ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽:` `1.23.0` \n"
+            f"┣•➳➠ `𝚅𝙴𝚁𝚂𝙸𝙾𝙽:` `0.2`\n"
+            f"┣•➳➠ `𝙰𝙱𝚄𝚂𝙴:` `Config.ABUSE`\n"
             f"┣•➳➠ `Sᴜᴅᴏ:` `{is_sudo}`\n"
             f"┣•➳➠ `𝙲𝙷𝙰𝙽𝙽𝙴𝙻:` [ᴊᴏɪɴ](Config.YOUR_CHANNEL)\n"
             f"┣•➳➠ `𝙶𝚁𝙾𝚄𝙿:` [ᴊᴏɪɴ](Config.YOUR_GROUP)\n"
