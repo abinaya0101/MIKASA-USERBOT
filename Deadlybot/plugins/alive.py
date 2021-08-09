@@ -30,8 +30,8 @@ DEADLY_CAPTION += " [✨𝚁𝙴𝙿𝙾✨](https://github.com/DEADLY-FIGHTERS/
                                       
 #-------------------------------------------------------------------------------
 
-# for DeadlyBot
-# ONLY for DeadlyBot
+# for Deadlybot
+# ONLY for Deadlybot
 # EDITED BY - @SAMEER_795 (SAMEER )
 # KANGERS STAY AWAY
 # JISNE KANG KIYA USKI MA CHOD DI JAYEGI
