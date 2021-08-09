@@ -1,13 +1,13 @@
 import functools
 from telethon import events
-from DeadlyBot import *
+from Deadlybot import *
 
 bothandler = Config.BOT_HANDLER
 
 
-def DeadlyBot_cmd(add_cmd, is_args=False):
+def Deadlybot_cmd(add_cmd, is_args=False):
     def cmd(func):
-        DeadlyBot = bot.tgbot
+        Deadlybot = bot.tgbot
         if is_args:
             pattern = bothandler + add_cmd + "(?: |$)(.*)"
         elif is_args == "simp":
@@ -18,7 +18,7 @@ def DeadlyBot_cmd(add_cmd, is_args=False):
             pattern = bothandler + add_cmd + " (\S+)"
         else:
             pattern = bothandler + add_cmd + "$"
-        DeadlyBot.add_event_handler(
+        Deadlybot.add_event_handler(
             func, events.NewMessage(incoming=True, pattern=pattern)
         )
 
@@ -29,8 +29,8 @@ def is_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            DeadlyBot = bot.tgbot
-            perms = await DeadlyBot.get_permissions(event.chat_id, event.sender_id)
+            Deadlybot = bot.tgbot
+            perms = await Deadlybot.get_permissions(event.chat_id, event.sender_id)
             user = event.sender_id
             ForGo10 = bot.uid
             if perms.is_admin:
@@ -51,9 +51,9 @@ def is_bot_admin():
     def decorator(func):
         @functools.wraps(func)
         async def wrapper(event):
-            DeadlyBot = bot.tgbot
-            boat = await DeadlyBot.get_me()
-            perms = await DeadlyBot.get_permissions(event.chat_id, boat)
+            Deadlybot = bot.tgbot
+            boat = await Deadlybot.get_me()
+            perms = await Deadlybot.get_permissions(event.chat_id, boat)
             if perms.is_admin:
                 await func(event)
             else:

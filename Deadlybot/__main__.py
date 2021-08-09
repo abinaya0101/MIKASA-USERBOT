@@ -7,10 +7,10 @@ import telethon.utils
 from telethon import TelegramClient
 from telethon.tl.functions.channels import InviteToChannelRequest, JoinChannelRequest
 
-from DeadlyBot import LOGS, bot, tbot
-from DeadlyBot.config import Config
-from DeadlyBot.utils import load_module
-from DeadlyBot.version import __deadly__ as deadlyver
+from Deadlybot import LOGS, bot, tbot
+from Deadlybot.config import Config
+from Deadlybot.utils import load_module
+from Deadlybot.version import __deadly__ as deadlyver
 hl = Config.HANDLER
 MIKASA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 
@@ -25,7 +25,7 @@ async def deadly_bot(bot_token):
         sys.exit()
 
 
-# DeadlyBot starter...
+# Deadlybot starter...
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
@@ -37,9 +37,9 @@ else:
                 "BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
             ).start(bot_token=Config.BOT_TOKEN)
             LOGS.info("Checking Completed. Proceeding to next step...")
-            LOGS.info("🔰 Starting DeadlyBot 🔰")
+            LOGS.info("🔰 Starting Deadlybot 🔰")
             bot.loop.run_until_complete(deadly_bot(Config.BOT_USERNAME))
-            LOGS.info("🔥 DeadlyBot Startup Completed 🔥")
+            LOGS.info("🔥 Deadlybot Startup Completed 🔥")
         else:
             bot.start()
     except Exception as e:
@@ -47,7 +47,7 @@ else:
         sys.exit()
 
 # imports plugins...
-path = "DeadlyBot/plugins/*.py"
+path = "Deadlybot/plugins/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -56,14 +56,14 @@ for name in files:
         load_module(shortname.replace(".py", ""))
 
 # Extra Modules...
-# extra_repo = Config.EXTRA_REPO or "https://github.com/The-DeadlyBot/Extra"
+# extra_repo = Config.EXTRA_REPO or "https://github.com/The-Deadlybot/Extra"
 # if Config.EXTRA == "True":
 #     try:
 #         os.system(f"git clone {extra_repo}")
 #     except BaseException:
 #         pass
 #     LOGS.info("Installing Extra Plugins")
-#     path = "DeadlyBot/plugins/*.py"
+#     path = "Deadlybot/plugins/*.py"
 #     files = glob.glob(path)
 #     for name in files:
 #         with open(name) as ex:
@@ -75,9 +75,9 @@ for name in files:
 # let the party begin...
 LOGS.info("Starting Bot Mode !")
 tbot.start()
-LOGS.info("⚡ Your DeadlyBot Is Now Working ⚡")
+LOGS.info("⚡ Your Deadlybot Is Now Working ⚡")
 LOGS.info(
-    "Head to @deadly_techy for Updates. Also join chat group to get help regarding to DeadlyBot."
+    "Head to @deadly_techy for Updates. Also join chat group to get help regarding to Deadlybot."
 )
 
 # that's life...
@@ -92,7 +92,7 @@ async def deadly_is_on():
     except Exception as e:
         LOGS.info(str(e))
 
-# Join DeadlyBot Channel after deploying 🤐😅
+# Join Deadlybot Channel after deploying 🤐😅
     try:
         await bot(JoinChannelRequest("@deadly_techy"))
     except BaseException:
@@ -113,4 +113,4 @@ else:
     bot.tgbot = None
     bot.run_until_disconnected()
 
-# DeadlyBot
+# Deadlybot
