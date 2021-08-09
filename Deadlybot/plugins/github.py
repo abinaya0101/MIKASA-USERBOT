@@ -82,7 +82,7 @@ async def git_commit(file_name, mikasabot):
         return await eod(deadlybot, "`Committed Suicide`")
 
 
-@bot.on(deadlybot_cmd(pattern="github (.*)", outgoing=True))
+@bot.on(deadly_cmd(pattern="github (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="github (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
