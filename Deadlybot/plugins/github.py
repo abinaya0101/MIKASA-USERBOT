@@ -8,7 +8,7 @@ from . import *
 
 GIT_TEMP_DIR = "./userbot/temp/"
 
-@bot.on(mikasa_cmd(pattern=r"commit"))
+@bot.on(deadly_cmd(pattern=r"commit"))
 @bot.on(sudo_cmd(pattern=r"commit"))
 async def download(event):
     if event.fwd_from:
@@ -19,7 +19,7 @@ async def download(event):
     if Config.GIT_REPO_NAME is None:
         await eod(event, "`Please ADD Proper Github Repo Name of HellBot`")
         return
-    hellbot = await eor(event, "Processing ...")
+    deadlybot = await eor(event, "Processing ...")
     if not os.path.isdir(GIT_TEMP_DIR):
         os.makedirs(GIT_TEMP_DIR)
     start = datetime.now()
@@ -31,12 +31,12 @@ async def download(event):
             reply_message.media, GIT_TEMP_DIR
         )
     except Exception as e:
-        await eod(hellbot, str(e))
+        await eod(deadlybot, str(e))
     else:
         end = datetime.now()
         ms = (end - start).seconds
         await event.delete()
-        await hellbot.edit(
+        await deadlybot.edit(
             "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
         )
         await hellbot.edit("Committing to Github....")
@@ -59,9 +59,9 @@ async def git_commit(file_name, mikasabot):
     for i in content_list:
         create_file = True
         if i == 'ContentFile(path="' + file_name + '")':
-            return await hellbot.edit("`File Already Exists`")
+            return await deadlybot.edit("`File Already Exists`")
             create_file = False
-    file_name = "hellbot/plugins/" + file_name
+    file_name = "Deadlybot/plugins/" + file_name
     if create_file == True:
         file_name = file_name.replace("./userbot/temp/", "")
         print(file_name)
@@ -72,17 +72,17 @@ async def git_commit(file_name, mikasabot):
             print("Committed File")
             ccess = Config.GIT_REPO_NAME
             ccess = ccess.strip()
-            await hellbot.edit(
+            await deadlybot.edit(
                 f"`Commited On Your Github Repo`\n\n[Your STDPLUGINS](https://github.com/{ccess}/tree/master/userbot/plugins/)"
             )
         except:
             print("Cannot Create Plugin")
-            await eod(hellbot, "Cannot Upload Plugin")
+            await eod(deadlybot, "Cannot Upload Plugin")
     else:
-        return await eod(hellbot, "`Committed Suicide`")
+        return await eod(deadlybot, "`Committed Suicide`")
 
 
-@bot.on(mikasa_cmd(pattern="github (.*)", outgoing=True))
+@bot.on(deadlybot_cmd(pattern="github (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="github (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
