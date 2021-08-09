@@ -43,7 +43,7 @@ DEADLY_CAPTION += " [✨𝚁𝙴𝙿𝙾✨](https://github.com/DEADLY-FIGHTERS/
 import time
 
 from userbot import StartTime
-from deadlybot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Deadlybot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 ludosudo = Config.SUDO
 
