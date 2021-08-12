@@ -85,8 +85,6 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-uptime = get_readable_time((time.time() - StartTime))
-
 
 @bot.on(deadly_cmd(outgoing=True, pattern="deadly$"))
 @bot.on(sudo_cmd(pattern="deadly$", allow_sudo=True))
@@ -105,7 +103,6 @@ async def amireallyalive(alive):
         deadly_caption += f"┣•➳➠ `Sᴜᴅᴏ:` `{is_sudo}`\n"
         deadly_caption += f"┣•➳➠ `Cʜᴀɴɴᴇʟ:` [Jᴏɪɴ](Config.YOUR_CHANNEL)\n"
         deadly_caption += f"┣•➳➠ `Gʀᴏᴜᴘ:` [Jᴏɪɴ](Config.YOUR_GROUP)\n"
-        deadly_caption += f"┣•➳➠ `Uᴘᴛɪᴍᴇ:`{uptime}`\n"
         deadly_caption += f"┗━━━━━━━━━━━━━━━━━━━\n"
         await alive.client.send_file(
             alive.chat_id, DEADLY_IMG, caption=deadly_caption, reply_to=reply_to_id
