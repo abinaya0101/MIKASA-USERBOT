@@ -45,20 +45,8 @@ import time
 from userbot import StartTime
 from Deadlybot.utils import deadly_cmd, edit_or_reply, sudo_cmd
 
-ludosudo = Config.SUDO
 
-if ludosudo:
-    sudou = "True"
-else:
-    sudou = "False"
 
-async def reply_id(event):
-    reply_to_id = None
-    if event.sender_id in Config.SUDO:
-        reply_to_id = event.id
-    if event.reply_to_msg_id:
-        reply_to_id = event.reply_to_msg_id
-    return reply_to_id
 
 
 DEFAULTUSER = Config.YOUR_NAME or "Deadly User"
