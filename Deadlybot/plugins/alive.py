@@ -43,7 +43,7 @@ DEADLY_CAPTION += " [✨𝚁𝙴𝙿𝙾✨](https://github.com/DEADLY-FIGHTERS/
 import time
 
 from userbot import StartTime
-from Deadlybot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from Deadlybot.utils import deadly_cmd, edit_or_reply, sudo_cmd
 
 ludosudo = Config.SUDO
 
@@ -100,7 +100,7 @@ def get_readable_time(seconds: int) -> str:
 uptime = get_readable_time((time.time() - StartTime))
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="deadly$"))
+@bot.on(deadly_cmd(outgoing=True, pattern="deadly$"))
 @bot.on(sudo_cmd(pattern="deadly$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
