@@ -9,7 +9,7 @@ async def pong(deadly):
     if deadly.fwd_from:
         return
     start = datetime.datetime.now()
-    event = await eor(deadly, "pls wait")
+    event = await eor(deadly, "tunggu boss")
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
@@ -17,7 +17,7 @@ async def pong(deadly):
     )
 
 CmdHelp("ping").add_command(
-  "ping", None, "Checks the ping speed of your Dєα∂ly Bσт"
+  "ping", None, "meng cek speed si ano"
 ).add_warning(
   "✅ Harmless Module"
 ).add()
